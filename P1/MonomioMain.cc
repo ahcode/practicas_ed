@@ -1,5 +1,5 @@
-#include "Monomio.h"
 #include <iostream>
+#include "Monomio.h"
 
 using std::cout;
 using std::cin;

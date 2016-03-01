@@ -1,11 +1,11 @@
 #ifndef MONOMIO_H
 #define MONOMIO_H
 
-#include "MonomioInterfaz.h"
 #include <iostream>
 #include <string>
 #include <cmath>
 #include <sstream>
+#include "MonomioInterfaz.h"
 
 class Monomio: public MonomioInterfaz{
 	private:
