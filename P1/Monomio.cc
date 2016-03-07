@@ -15,7 +15,7 @@ std::string Monomio::crearSalida() const {
 	if (coeficiente_!=0){
 		if (coeficiente_!=1)
 			if (coeficiente_==-1)
-				salida << "-";
+				salida << "- ";
 			else
 				salida << coeficiente_;
 		if (grado_!=0){
