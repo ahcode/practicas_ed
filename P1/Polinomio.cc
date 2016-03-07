@@ -91,6 +91,32 @@ float Polinomio::valor(float const &x) const{
 	return valor;
 }
 
+Polinomio Polinomio::operator=(Polinomio const &p){
+	grado_=p.grado_;
+	nmonomios_=p.nmonomios_;
+	monomios_=p.monomios_;
+	return *this;
+}
+
+Polinomio Polinomio::operator+(Polinomio const &p){
+	Polinomio aux;
+	bool insertado;
+	for(std::list<Monomio>::iterator i=monomios_.begin();i!=monomios_.end();i++)
+		aux.insertarMonomio(*i);
+	for(std::list<Monomio>::const_iterator i=p.monomios_.begin();i!=p.monomios_.end();i++)
+		aux.insertarMonomio(*i);
+	return aux;
+}
+
+Polinomio Polinomio::operator*(Polinomio const &p){
+	Polinomio aux;
+	bool insertado;
+	for(std::list<Monomio>::iterator i=monomios_.begin();i!=monomios_.end();i++)
+		for(std::list<Monomio>::const_iterator j=p.monomios_.begin();j!=p.monomios_.end();j++)
+			aux.insertarMonomio((*i)*(*j));
+	return aux;
+}
+
 std::istream &operator>>(std::istream &stream, Polinomio &p){
 	int nmonomios;
 	std::cout << "Número de monomios: ";

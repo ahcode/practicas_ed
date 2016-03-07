@@ -27,6 +27,9 @@ class Polinomio: public PolinomioInterfaz{
 		void leerPolinomio();
 		void escribirPolinomio() const;
 		float valor(float const &x) const;
+		Polinomio operator=(Polinomio const &m);
+		Polinomio operator*(Polinomio const &m);
+		Polinomio operator+(Polinomio const &m);
 		friend std::istream &operator>>(std::istream &stream, Polinomio &p);
 		friend std::ostream &operator<<(std::ostream &stream, Polinomio const &p);
 };
