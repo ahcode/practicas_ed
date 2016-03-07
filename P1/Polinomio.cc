@@ -11,6 +11,14 @@ Polinomio::Polinomio(int const &g, int const &n){
 	}
 }
 
+Polinomio::Polinomio(std::list<Monomio> const &m){
+	nmonomios_=0;
+	for(std::list<Monomio>::const_iterator i=m.begin();i!=m.end();i++){
+		insertarMonomio(*i);
+	}
+	actualizarGrado();
+}
+
 Polinomio::Polinomio(Polinomio const &p){
 	setGrado(p.getGrado());
 	setNMonomios(p.getNMonomios());
@@ -34,14 +42,18 @@ void Polinomio::insertarMonomio(Monomio const &m){
 	}
 	if(!insertado)
 		monomios_.push_back(m);
+	actualizarGrado();
+	nmonomios_++;
 }
 
 void Polinomio::leerPolinomio(){
-	std::cout << "Número de monomios a insertar: ";
-	std::cin >> nmonomios_;
+	int nmonomios;
+	std::cout << "Número de monomios: ";
+	std::cin >> nmonomios;
 	Monomio m;
 	monomios_.clear();
-	for (int i=0;i<nmonomios_;i++){
+	nmonomios_=0;
+	for (int i=0;i<nmonomios;i++){
 		std::cout << "Monomio " << i+1 << ":\n";
 		m.leerMonomio();
 		insertarMonomio(m);
@@ -50,16 +62,25 @@ void Polinomio::leerPolinomio(){
 
 std::string Polinomio::crearSalida() const{
 	std::ostringstream salida;
+	bool vacio=true;
 	for(std::list<Monomio>::const_iterator i=monomios_.begin();i!=monomios_.end();i++){
 		if (i!=monomios_.begin() && (*i).getCoeficiente()>0)
-			salida << " ";
-		if ((*i).getCoeficiente()!=0)
+			salida << "+ ";
+		if ((*i).getCoeficiente()!=0){
 			salida << (*i) << " ";
+			vacio=false;
+		}
 	}
+	if (vacio)
+		salida << "0";
 	return salida.str();
 }
 
-void Polinomio::escribirPolinomio(){
+void Polinomio::actualizarGrado(){
+	grado_=monomios_.front().getGrado();
+}
+
+void Polinomio::escribirPolinomio() const{
 	std::cout << crearSalida() <<"\n";
 }
 
@@ -71,13 +92,15 @@ float Polinomio::valor(float const &x) const{
 }
 
 std::istream &operator>>(std::istream &stream, Polinomio &p){
-	std::cout << "Número de monomios a insertar: ";
-	stream >> p.nmonomios_;
+	int nmonomios;
+	std::cout << "Número de monomios: ";
+	stream >> nmonomios;
 	Monomio m;
 	p.monomios_.clear();
-	for (int i=0;i<p.nmonomios_;i++){
+	p.nmonomios_=0;
+	for (int i=0;i<nmonomios;i++){
 		std::cout << "Monomio " << i+1 << ":\n";
-		m.leerMonomio();
+		stream >> m;
 		p.insertarMonomio(m);
 	}
 	return stream;
