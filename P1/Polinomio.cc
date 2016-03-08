@@ -42,6 +42,7 @@ void Polinomio::insertarMonomio(Monomio const &m){
 	for(std::list<Monomio>::iterator i=monomios_.begin();i!=monomios_.end();i++){
 		if ((*i).getGrado()<g){
 			monomios_.insert(i,m);
+			nmonomios_++;
 			insertado=true;
 			break;
 		}
@@ -51,10 +52,11 @@ void Polinomio::insertarMonomio(Monomio const &m){
 			break;
 		}
 	}
-	if(!insertado)
+	if(!insertado){
 		monomios_.push_back(m);
+		nmonomios_++;
+	}
 	actualizarGrado();
-	nmonomios_++;
 }
 
 void Polinomio::leerPolinomio(){

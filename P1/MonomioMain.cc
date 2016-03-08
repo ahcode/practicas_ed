@@ -45,10 +45,9 @@ int main(){
           cout << "Introduce el número de monomio = ";
           cin >> n1;
         }while(n1<1 || n1>3);
-        n1--;
         cout << "Introduce valor de X = ";
         cin >> x;
-        cout << "M" << n1 << ": " << m[n1]->valor(x) << "\n\n";
+        cout << "M" << n1 << ": " << m[n1-1]->valor(x) << "\n\n";
         break;
       case 3:
         do{
