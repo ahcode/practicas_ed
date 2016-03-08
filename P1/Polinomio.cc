@@ -25,6 +25,17 @@ Polinomio::Polinomio(Polinomio const &p){
 	setMonomios(p.getMonomios());
 }
 
+bool Polinomio::vacio() const{
+	bool vacio=true;
+	for(std::list<Monomio>::const_iterator i=monomios_.begin();i!=monomios_.end();i++){
+		if ((*i).getCoeficiente()!=0){
+			vacio=false;
+			break;
+		}
+	}
+	return vacio;
+}
+
 void Polinomio::insertarMonomio(Monomio const &m){
 	int g=m.getGrado();
 	bool insertado=false;
@@ -62,17 +73,15 @@ void Polinomio::leerPolinomio(){
 
 std::string Polinomio::crearSalida() const{
 	std::ostringstream salida;
-	bool vacio=true;
-	for(std::list<Monomio>::const_iterator i=monomios_.begin();i!=monomios_.end();i++){
-		if (i!=monomios_.begin() && (*i).getCoeficiente()>0)
-			salida << "+ ";
-		if ((*i).getCoeficiente()!=0){
-			salida << (*i) << " ";
-			vacio=false;
-		}
-	}
-	if (vacio)
+	if (vacio())
 		salida << "0";
+	else
+		for(std::list<Monomio>::const_iterator i=monomios_.begin();i!=monomios_.end();i++){
+			if (i!=monomios_.begin() && (*i).getCoeficiente()>0)
+				salida << "+ ";
+			if ((*i).getCoeficiente()!=0)
+				salida << (*i) << " ";
+		}
 	return salida.str();
 }
 

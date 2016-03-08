@@ -11,6 +11,7 @@ class PolinomioInterfaz{
 	virtual int getGrado() const=0;
 	virtual int getNMonomios() const=0;
 	virtual std::list<Monomio> getMonomios() const=0;
+	virtual bool vacio() const=0;
 };
 
 #endif
