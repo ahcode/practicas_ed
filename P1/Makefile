@@ -1,10 +1,10 @@
 all: MonomioMain.out PolinomioMain.out
 
-MonomioMain.out: MonomioMain.cc Monomio.cc
-	g++ MonomioMain.cc Monomio.cc -o MonomioMain.out
+MonomioMain.out: MonomioMain.cpp Monomio.cpp
+	g++ MonomioMain.cpp Monomio.cpp -o MonomioMain.out
 
-PolinomioMain.out: PolinomioMain.cc Polinomio.cc Monomio.cc
-	g++ PolinomioMain.cc Polinomio.cc Monomio.cc -o PolinomioMain.out
+PolinomioMain.out: PolinomioMain.cpp Polinomio.cpp Monomio.cpp
+	g++ PolinomioMain.cpp Polinomio.cpp Monomio.cpp -o PolinomioMain.out
 
 clean:
 	rm -f MonomioMain.out PolinomioMain.out
