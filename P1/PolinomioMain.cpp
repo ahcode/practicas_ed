@@ -3,6 +3,7 @@
 
 using std::cout;
 using std::cin;
+using namespace ed;
 
 int main(){
   Polinomio p1;
