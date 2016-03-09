@@ -23,8 +23,8 @@ class Polinomio: public PolinomioInterfaz{
 		inline void setMonomios(std::list<Monomio> const &m){monomios_=m;};
 		inline int getGrado() const{return grado_;};
 		inline int getNMonomios() const{return nmonomios_;};
-		bool vacio() const;
 		std::list<Monomio> getMonomios() const{return monomios_;};
+		bool vacio() const;
 		void leerPolinomio();
 		void escribirPolinomio() const;
 		float valor(float const &x) const;

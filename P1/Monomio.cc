@@ -1,27 +1,27 @@
 #include "Monomio.h"
 
 Monomio::Monomio(float const &c, int const &g){
-	coeficiente_=c;
-	grado_=g;
+	setCoeficiente(c);
+	setGrado(g);
 }
 
 Monomio::Monomio(Monomio const &m){
-	coeficiente_=m.coeficiente_;
-	grado_=m.grado_;
+	setCoeficiente(m.getCoeficiente());
+	setGrado(m.getGrado());
 }
 
 std::string Monomio::crearSalida() const {
 	std::ostringstream salida;
-	if (coeficiente_!=0){
-		if (coeficiente_!=1)
-			if (coeficiente_==-1)
+	if (getCoeficiente()!=0){
+		if (getCoeficiente()!=1)
+			if (getCoeficiente()==-1)
 				salida << "- ";
 			else
-				salida << coeficiente_;
-		if (grado_!=0){
+				salida << getCoeficiente();
+		if (getGrado()!=0){
 			salida << "x";
-			if (grado_!=1)
-				salida << "^" << grado_;
+			if (getGrado()!=1)
+				salida << "^" << getGrado();
 		}
 	}else
 		salida << "0";
@@ -29,10 +29,14 @@ std::string Monomio::crearSalida() const {
 }
 
 void Monomio::leerMonomio(){
+	float c;
+	int g;
 	std::cout << "Introduce el coeficiente: ";
-	std::cin >> coeficiente_;
+	std::cin >> c;
+	setCoeficiente(c);
 	std::cout << "Introduce el grado: ";
-	std::cin >> grado_;
+	std::cin >> g;
+	setGrado(g);
 }
 
 void Monomio::escribirMonomio() const {
@@ -40,27 +44,31 @@ void Monomio::escribirMonomio() const {
 }
 
 Monomio Monomio::operator=(Monomio const &m){
-	coeficiente_=m.coeficiente_;
-	grado_=m.grado_;
+	setCoeficiente(m.getCoeficiente());
+	setGrado(m.getGrado());
 	return *this;
 }
 
 Monomio Monomio::operator*(Monomio const &m){
 	Monomio aux;
-	aux.coeficiente_ = coeficiente_ * m.coeficiente_;
-	aux.grado_ = grado_ + m.grado_;
+	aux.setCoeficiente(getCoeficiente() * m.getCoeficiente());
+	aux.setGrado(getGrado() + m.getGrado());
 	return aux;
 }
 
 float Monomio::valor(float x) const {
-	return coeficiente_*pow(x , grado_);
+	return getCoeficiente()*pow(x , getGrado());
 }
 
 std::istream &operator>>(std::istream &stream, Monomio &m){
+	float c;
+	int g;
 	std::cout << "Introduce el coeficiente: ";
-	stream >> m.coeficiente_;
+	stream >> c;
+	m.setCoeficiente(c);
 	std::cout << "Introduce el grado: ";
-	stream >> m.grado_;
+	stream >> g;
+	m.setGrado(g);
 	return stream;
 }
 

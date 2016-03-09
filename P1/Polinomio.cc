@@ -2,8 +2,8 @@
 
 Polinomio::Polinomio(int const &g, int const &n){
 	int grado=g;
-	grado_=g;
-	nmonomios_=n;
+	setGrado(g);
+	setNMonomios(n);
 	Monomio m(1,grado);
 	for (int i=0;i<n;i++){
 		monomios_.push_back(m);
@@ -12,7 +12,7 @@ Polinomio::Polinomio(int const &g, int const &n){
 }
 
 Polinomio::Polinomio(std::list<Monomio> const &m){
-	nmonomios_=0;
+	setNMonomios(0);
 	for(std::list<Monomio>::const_iterator i=m.begin();i!=m.end();i++){
 		insertarMonomio(*i);
 	}
@@ -65,7 +65,7 @@ void Polinomio::leerPolinomio(){
 	std::cin >> nmonomios;
 	Monomio m;
 	monomios_.clear();
-	nmonomios_=0;
+	setNMonomios(0);
 	for (int i=0;i<nmonomios;i++){
 		std::cout << "Monomio " << i+1 << ":\n";
 		m.leerMonomio();
@@ -88,7 +88,7 @@ std::string Polinomio::crearSalida() const{
 }
 
 void Polinomio::actualizarGrado(){
-	grado_=monomios_.front().getGrado();
+	setGrado(monomios_.front().getGrado());
 }
 
 void Polinomio::escribirPolinomio() const{
@@ -103,9 +103,9 @@ float Polinomio::valor(float const &x) const{
 }
 
 Polinomio Polinomio::operator=(Polinomio const &p){
-	grado_=p.grado_;
-	nmonomios_=p.nmonomios_;
-	monomios_=p.monomios_;
+	setGrado(p.getGrado());
+	setNMonomios(p.getNMonomios());
+	setMonomios(p.getMonomios());
 	return *this;
 }
 
@@ -134,7 +134,7 @@ std::istream &operator>>(std::istream &stream, Polinomio &p){
 	stream >> nmonomios;
 	Monomio m;
 	p.monomios_.clear();
-	p.nmonomios_=0;
+	p.setNMonomios(0);
 	for (int i=0;i<nmonomios;i++){
 		std::cout << "Monomio " << i+1 << ":\n";
 		stream >> m;
