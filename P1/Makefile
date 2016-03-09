@@ -7,4 +7,4 @@ PolinomioMain.out: PolinomioMain.cc Polinomio.cc Monomio.cc
 	g++ PolinomioMain.cc Polinomio.cc Monomio.cc -o PolinomioMain.out
 
 clean:
-	rm MonomioMain.out PolinomioMain.out
+	rm -f MonomioMain.out PolinomioMain.out
