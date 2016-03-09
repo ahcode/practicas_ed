@@ -5,7 +5,7 @@
 #include <string>
 #include <cmath>
 #include <sstream>
-#include "MonomioInterfaz.h"
+#include "MonomioInterfaz.hpp"
 
 class Monomio: public MonomioInterfaz{
 	private:

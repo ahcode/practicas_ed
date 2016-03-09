@@ -2,7 +2,7 @@
 #define POLINOMIOINTERFAZ_H
 
 #include <list>
-#include "Monomio.h"
+#include "Monomio.hpp"
 
 class PolinomioInterfaz{
 	virtual void setGrado(int const &g)=0;

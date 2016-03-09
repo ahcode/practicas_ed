@@ -1,4 +1,4 @@
-#include "Polinomio.h"
+#include "Polinomio.hpp"
 
 Polinomio::Polinomio(int const &g, int const &n){
 	int grado=g;

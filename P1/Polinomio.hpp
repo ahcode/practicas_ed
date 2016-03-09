@@ -4,8 +4,8 @@
 #include <iostream>
 #include <list>
 #include <sstream>
-#include "PolinomioInterfaz.h"
-#include "Monomio.h"
+#include "PolinomioInterfaz.hpp"
+#include "Monomio.hpp"
 
 class Polinomio: public PolinomioInterfaz{
 	private:

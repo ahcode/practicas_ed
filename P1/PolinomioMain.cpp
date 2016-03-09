@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Polinomio.h"
+#include "Polinomio.hpp"
 
 using std::cout;
 using std::cin;

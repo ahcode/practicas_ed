@@ -1,4 +1,4 @@
-#include "Monomio.h"
+#include "Monomio.hpp"
 
 Monomio::Monomio(float const &c, int const &g){
 	setCoeficiente(c);
