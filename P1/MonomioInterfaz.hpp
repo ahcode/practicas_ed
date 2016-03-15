@@ -1,3 +1,9 @@
+/*!
+\file MonomioInterfaz.hpp
+\brief Interfaz de la clase Monomio
+\author Álvaro Herrero Pérez
+\date 14/03/2016
+*/
 #ifndef MONOMIOINTERFAZ_H
 #define MONOMIOINTERFAZ_H
 

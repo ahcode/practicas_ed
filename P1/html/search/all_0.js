@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['crearsalida',['crearSalida',['../classed_1_1Monomio.html#a57740c0cdfb6650a5ee162635d4f58ce',1,'ed::Monomio']]]
+  ['actualizargrado',['actualizarGrado',['../classed_1_1Polinomio.html#ab90005a9799e7aa48feb01b658e17ea6',1,'ed::Polinomio']]]
 ];

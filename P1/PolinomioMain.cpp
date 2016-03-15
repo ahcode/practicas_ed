@@ -1,3 +1,16 @@
+/*!
+\file PolinomioMain.cpp
+\brief Programa principal para probar la clase Polinomio
+\author Álvaro Herrero Pérez
+\date 14/03/2016
+*/
+
+/*!
+\mainpage Práctica 1 de la asignatura Estructura de Datos
+\author Álvaro Herrero Pérez
+\date 15 de Marzo de 2016
+*/
+
 #include <iostream>
 #include "Polinomio.hpp"
 

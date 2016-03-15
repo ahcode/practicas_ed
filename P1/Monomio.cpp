@@ -1,3 +1,9 @@
+/*!
+\file Monomio.cpp
+\brief Implementación de la clase Monomio
+\author Álvaro Herrero Pérez
+\date 14/03/2016
+*/
 #include "Monomio.hpp"
 
 namespace ed{
@@ -31,14 +37,7 @@ namespace ed{
 	}
 
 	void Monomio::leerMonomio(){
-		float c;
-		int g;
-		std::cout << "Introduce el coeficiente: ";
-		std::cin >> c;
-		setCoeficiente(c);
-		std::cout << "Introduce el grado: ";
-		std::cin >> g;
-		setGrado(g);
+		std::cin >> *this;
 	}
 
 	void Monomio::escribirMonomio() const {

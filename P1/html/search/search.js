@@ -7,16 +7,22 @@
 
 var indexSectionsWithContent =
 {
-  0: "cmps",
+  0: "acegilmopsv",
   1: "mp",
-  2: "cms"
+  2: "mp",
+  3: "acegilmopsv",
+  4: "o",
+  5: "p"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions"
+  2: "files",
+  3: "functions",
+  4: "related",
+  5: "pages"
 };
 
 function convertToId(search)

@@ -1,5 +1,5 @@
 # Nombre del proyecto
-PROJECT_NAME           = Nombre del proyecto
+PROJECT_NAME           = "Monomios y Polinomios"
 
 # Idioma: español
 OUTPUT_LANGUAGE        = Spanish

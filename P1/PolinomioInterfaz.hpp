@@ -1,3 +1,9 @@
+/*!
+\file PolinomioInterfaz.hpp
+\brief Interfaz para la clase Polinomio
+\author Álvaro Herrero Pérez
+\date 14/03/2016
+*/
 #ifndef POLINOMIOINTERFAZ_H
 #define POLINOMIOINTERFAZ_H
 

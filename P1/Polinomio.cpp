@@ -1,7 +1,13 @@
+/*!
+\file Polinomio.cpp
+\brief Implementación de la clase polinomio
+\author Álvaro Herrero Pérez
+\date 14/03/2016
+*/
 #include "Polinomio.hpp"
 
 namespace ed{
-	
+
 	Polinomio::Polinomio(int const &g, int const &n){
 		int grado=g;
 		setGrado(g);
@@ -18,7 +24,6 @@ namespace ed{
 		for(std::list<Monomio>::const_iterator i=m.begin();i!=m.end();i++){
 			insertarMonomio(*i);
 		}
-		actualizarGrado();
 	}
 
 	Polinomio::Polinomio(Polinomio const &p){
@@ -41,38 +46,30 @@ namespace ed{
 	void Polinomio::insertarMonomio(Monomio const &m){
 		int g=m.getGrado();
 		bool insertado=false;
-		for(std::list<Monomio>::iterator i=monomios_.begin();i!=monomios_.end();i++){
-			if ((*i).getGrado()<g){
-				monomios_.insert(i,m);
+		if (m.getCoeficiente()!=0){
+			for(std::list<Monomio>::iterator i=monomios_.begin();i!=monomios_.end();i++){
+				if ((*i).getGrado()<g){
+					monomios_.insert(i,m);
+					nmonomios_++;
+					insertado=true;
+					break;
+				}
+				if ((*i).getGrado()==g){
+					(*i).setCoeficiente((*i).getCoeficiente()+m.getCoeficiente());
+					insertado=true;
+					break;
+				}
+			}
+			if(!insertado){
+				monomios_.push_back(m);
 				nmonomios_++;
-				insertado=true;
-				break;
 			}
-			if ((*i).getGrado()==g){
-				(*i).setCoeficiente((*i).getCoeficiente()+m.getCoeficiente());
-				insertado=true;
-				break;
-			}
+			actualizarGrado();
 		}
-		if(!insertado){
-			monomios_.push_back(m);
-			nmonomios_++;
-		}
-		actualizarGrado();
 	}
 
 	void Polinomio::leerPolinomio(){
-		int nmonomios;
-		std::cout << "Número de monomios: ";
-		std::cin >> nmonomios;
-		Monomio m;
-		monomios_.clear();
-		setNMonomios(0);
-		for (int i=0;i<nmonomios;i++){
-			std::cout << "Monomio " << i+1 << ":\n";
-			m.leerMonomio();
-			insertarMonomio(m);
-		}
+		std::cin >> *this;
 	}
 
 	std::string Polinomio::crearSalida() const{

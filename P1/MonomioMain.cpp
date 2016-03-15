@@ -1,3 +1,9 @@
+/*!
+\file MonomioMain.cpp
+\brief Programa principal para probar la clase Monomio
+\author Álvaro Herrero Pérez
+\date 14/03/2016
+*/
 #include <iostream>
 #include "Monomio.hpp"
 
