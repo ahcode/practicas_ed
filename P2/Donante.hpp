@@ -23,9 +23,11 @@ namespace ed{
 			inline std::string getFRH() const{return frh_;};
 			void leerDonante();
 			void mostrarDonante();
-			Donante operator=(Donante const &d);
+			Donante &operator=(Donante const &d);
 			bool operator==(Donante const &d);
 			bool operator<=(Donante const &d);
+			friend std::istream &operator>>(std::istream &stream, Donante &d);
+			friend std::ostream &operator<<(std::ostream &stream, Donante const &d);
 	};
 }
 #endif
