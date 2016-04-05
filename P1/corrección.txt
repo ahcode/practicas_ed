@@ -1,0 +1,32 @@
+Profesor: Nicolas Luis Fernandez Garcia
+Nota: 8/10
+
++ Makefile: se puede mejorar
+
+ Se recomienda generar los ficheros de tipo objetos y después enlazarlos para crear el programa ejecutable (dos fases)
+
+ También se recomienda usar
+
+CPPFLAGS: -c -g -ansi -Wall 
+
+
++ Compilación: sin errores
+
+
++ Ejecución:
+ Programa del monomio: debería mostrar los monomios que está usando en cada opción
+
+Programa del polinomio:
+
+ Se debe comprobar si es positivo el coeficiente del monomio de mayor grado para no escribir el signo + al principio del polinomio.
+
++ Código
+ Se debe comentar el código entre lineas con entusiasmo.
+
++ Doxygen
+
+ Se deben revisar los avisos que se generan
+
+Se deben comentar las clases abstractas
+
+ Se deben comentar los atributos de cada clase.
