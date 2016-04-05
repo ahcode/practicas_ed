@@ -13,20 +13,30 @@ namespace ed{
 	}
 
 	bool Donante::setGrupo(std::string const &g){
-		if (g=="0" || g=="A" || g=="B" || g=="AB"){
-			grupo_=g;
+		if (g=="0" || g=="cero"){
+			grupo_="0";
 			return true;
-		}
-		else
+		}else if (g=="A" || g=="a"){
+			grupo_="A";
+			return true;
+		}else if (g=="B" || g=="b"){
+			grupo_="B";
+			return true;
+		}else if (g=="AB" || g=="ab"){
+			grupo_="AB";
+			return true;
+		}else
 			return false;
 	}
 
 	bool Donante::setFRH(std::string const &f){
-		if (f=="positivo" || f=="negativo"){
-			frh_=f;
+		if (f=="positivo" || f=="+" || f=="POSITIVO" || f=="Positivo"){
+			frh_="Positivo";
 			return true;
-		}
-		else
+		}else if(f=="negativo" || f=="-" || f=="NEGATIVO" || f=="Negativo"){
+			frh_="Negativo";
+			return true;
+		}else
 			return false;
 	}
 
@@ -34,8 +44,65 @@ namespace ed{
 		std::cin >> *this;
 	}
 
-	void Donante::mostrarDonante(){
+	void Donante::mostrarDonante() const{
 		std::cout << *this;
+	}
+
+	void Donante::modificarDonante(){
+		int op;
+		bool error=false;
+		std::string in;
+		do {
+			std::cout << "¿Que campo quieres modificar?\n";
+			NEGRITA; std::cout << "\t1."; NORMAL; std::cout << " Nombre\n";
+			NEGRITA; std::cout << "\t2."; NORMAL; std::cout << " Apellidos\n";
+			NEGRITA; std::cout << "\t3."; NORMAL; std::cout << " Grupo Sanguíneo\n";
+			NEGRITA; std::cout << "\t4."; NORMAL; std::cout << " Factor de Riesgo\n\n";
+			if(error)
+				std::cout << "<< La opción introducida no es válida >>";
+			SUBRAYADO; std::cout << "\nOpción"; NORMAL; std::cout << " = ";
+			std::cin >> op;
+			std::cin.ignore(256,'\n');
+			std::cout << "\n";
+			BORRAR;
+			error=true;
+		}while(op<1 || op>4);
+		switch(op){
+			case 1:
+				std::cout << "\n\tNuevo Nombre: ";
+				std::getline(std::cin,in);
+				setNombre(in);
+				BORRAR;
+				break;
+			case 2:
+				std::cout << "\n\tNuevos Apellidos: ";
+				std::getline(std::cin,in);
+				setApellidos(in);
+				BORRAR;
+				break;
+			case 3:
+				error=false;
+				do{
+					if(error)
+						std::cout << "<< El grupo sanguíneo elegido no es válido >>";
+					std::cout << "\n\tGrupo Sanguíneo: ";
+					std::getline(std::cin,in);
+					BORRAR;
+					error=true;
+				}while(setGrupo(in)==false);
+				break;
+			case 4:
+				error=false;
+				do{
+					if(error)
+						std::cout << "<< El factor de riesgo elegido no es válido >>";
+					std::cout << "\n\tFactor de Riesgo: ";
+					std::getline(std::cin,in);
+					BORRAR;
+					error=true;
+				}while(setFRH(in)==false);
+				break;
+		}
 	}
 
 	Donante &Donante::operator=(Donante const &d){
@@ -70,18 +137,18 @@ namespace ed{
 	std::istream &operator>>(std::istream &stream, Donante &d){
 		std::string aux;
 		std::cout << "Introduce el nombre: ";
-		stream >> aux;
+		std::getline(stream,aux);
 		d.setNombre(aux);
 		std::cout << "Introduce los apellidos: ";
-		stream >> aux;
+		std::getline(stream,aux);
 		d.setApellidos(aux);
 		do{
 			std::cout << "Introduce el grupo sanguíneo: ";
-			stream >> aux;
+			std::getline(stream,aux);
 		}while(d.setGrupo(aux)!=true);
 		do{
 			std::cout << "Introduce el factor RH: ";
-			stream >> aux;
+			std::getline(stream,aux);
 		}while(d.setFRH(aux)!=true);
 		return stream;
 	}

@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include "DonanteInterfaz.hpp"
+#include "macros.hpp"
 namespace ed{
 	class Donante: public DonanteInterfaz{
 		private:
@@ -22,7 +23,8 @@ namespace ed{
 			inline std::string getGrupo() const{return grupo_;};
 			inline std::string getFRH() const{return frh_;};
 			void leerDonante();
-			void mostrarDonante();
+			void mostrarDonante() const;
+			void modificarDonante();
 			Donante &operator=(Donante const &d);
 			bool operator==(Donante const &d);
 			bool operator<=(Donante const &d);

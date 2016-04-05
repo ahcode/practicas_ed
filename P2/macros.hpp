@@ -8,13 +8,17 @@
 #ifndef MACROS_HPP
 #define MACROS_HPP
 
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+
 #define LUGAR(x,y)   printf("\033[%d;%dH",x,y) //!< LUGAR
-#define BORRAR       printf("\33[2J")   //!< BORRAR
+#define BORRAR       system("clear")   //!< BORRAR
 #define PARPADEO     printf("%c[5m",27) //!< PARPADEO
-#define APAGA        printf("%c[0m",27) //!< APAGA
+#define NORMAL        printf("%c[0m",27) //!< APAGA
 #define INVERSO      printf("%c[7m",27) //!< INVERSO
 #define SUBRAYADO    printf("%c[4m",27) //!< SUBRAYADO
-#define INTENSIDAD   printf("%c[1m",27) //!< INTENSIDAD
+#define NEGRITA   printf("%c[1m",27) //!< INTENSIDAD
 
 #define RESET printf("\e[m") //!< RESET
 
@@ -33,6 +37,5 @@
 #define ONWHITE printf("\e[47m")   //!< ONWHITE
 #define ONMAGENTA printf("\e[45m") //!< ONMAGENTA
 #define ONBLACK printf("\e[40m")   //!< ONBLACK
-
 
 #endif
