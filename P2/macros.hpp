@@ -10,7 +10,6 @@
 
 #include <cstdio>
 #include <cstdlib>
-#include <iostream>
 
 #define LUGAR(x,y)   printf("\033[%d;%dH",x,y) //!< LUGAR
 #define BORRAR       system("clear")   //!< BORRAR
