@@ -29,7 +29,7 @@ int main(){
 	int op, n, n2, i;
 	bool salir = false, error;
 	while (salir==false){
-		error=0;
+		error=false;
 		do{
 			NEGRITA; cout << "1."; NORMAL; cout << " Leer Donante\n";
 			NEGRITA; cout << "2."; NORMAL; cout << " Mostrar Donante\n";
@@ -40,9 +40,8 @@ int main(){
 				cout << "<< La opción introducida no es válida >>";
 			SUBRAYADO; cout << "\nOpción"; NORMAL; cout << " = ";
 			cin >> op;
-			cout << "\n";
 			BORRAR;
-			error++;
+			error=true;
 		}while(op<1 || op>5);
 
 		switch(op){

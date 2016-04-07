@@ -35,6 +35,7 @@ namespace ed{
         std::cout << "<< El número introducido no es válido >>";
       SUBRAYADO; std::cout << "\n¿Cuantos donantes quieres crear?"; NORMAL; std::cout << " = ";
       std::cin >> n;
+      std::cin.ignore(256,'\n');
       BORRAR;
       error=true;
     }while(n<0);
@@ -48,13 +49,22 @@ namespace ed{
   }
 
   void Donantes::escribirDonantes() const{
+    if(!hayDonantes()){
+      std::cout << "\n<< No hay donantes >>\n";
+    }
     for(int pos=0;lista_.isValid(pos);pos++){
-      NEGRITA; std::cout << "Donante " << pos+1 << "\n"; NORMAL;
+      NEGRITA; std::cout << "\nDonante " << pos+1 << "\n"; NORMAL;
       std::cout << lista_.item(pos);
     }
   }
 
   void Donantes::borrarLista(){
     while(lista_.deletePosition(0));
+  }
+
+  int Donantes::numDonantes(){
+    int i;
+    for(i=0;lista_.isValid(i);i++);
+    return i;
   }
 }

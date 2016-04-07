@@ -1,7 +1,11 @@
-all: DonanteMain.out
+all: DonanteMain.out DonantesMain.out
 
 DonanteMain.out: DonanteMain.cpp DonanteInterfaz.hpp Donante.hpp Donante.cpp
 	g++ DonanteMain.cpp Donante.cpp -o DonanteMain.out
 
+DonantesMain.out: DonantesMain.cpp DonanteInterfaz.hpp Donante.hpp Donante.cpp DonantesInterfaz.hpp Donantes.hpp Donantes.cpp ListaDonantes.hpp ListaDonantes.cpp
+	g++ DonantesMain.cpp Donantes.cpp Donante.cpp ListaDonantes.cpp -o DonantesMain.out
+
 clean:
 	rm -f DonanteMain.out
+	rm -f DonantesMain.out

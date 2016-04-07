@@ -19,6 +19,7 @@ namespace ed{
     NodoDonante *nodo = new NodoDonante(d);
     if(isEmpty()){
       head_=nodo;
+      lastPos_++;
     }else{
       if (head_->item()<=d){
         if (head_->item()==d){
@@ -28,17 +29,19 @@ namespace ed{
         }else{
           nodo->setNext(head_);
           head_=nodo;
+          lastPos_++;
         }
       }else{
         for (NodoDonante *punt = head_; punt->next()!=NULL; punt=punt->next()){
           if(d<=punt->next()->item()){
             if (punt->next()->item()==d){
               nodo->setNext(punt->next()->next());
-              delete punt->next();
+              delete [] punt->next();
               punt->setNext(nodo);
             }else{
               nodo->setNext(punt->next());
               punt->setNext(nodo);
+              lastPos_++;
             }
             break;
           }
@@ -48,7 +51,7 @@ namespace ed{
   }
 
   Donante ListaDonantes::item(int const & pos) const{
-    assert(!isValid(pos));
+    assert(isValid(pos));
     NodoDonante *nodo = head_;
     for (int i=0; i<pos; i++)
       nodo=nodo->next();
@@ -59,13 +62,19 @@ namespace ed{
     if(!isValid(pos))
       return false;
     NodoDonante *aux, *nodo = head_;
-    for (int i=0; i<pos-1; i++)
-      nodo=nodo->next();
+    if (pos==0){
+      aux = head_;
+      head_ = head_->next();
+      delete [] aux;
+    }else{
+      for (int i=0; i<pos-1; i++)
+        nodo=nodo->next();
 
-    aux = nodo->next();
-    nodo->setNext(aux->next());
-    delete aux;
-
+      aux = nodo->next();
+      nodo->setNext(aux->next());
+      delete [] aux;
+    }
+    lastPos_--;
     return true;
   }
 
