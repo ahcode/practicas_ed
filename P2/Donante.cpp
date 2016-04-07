@@ -113,14 +113,14 @@ namespace ed{
 		return *this;
 	}
 
-	bool Donante::operator==(Donante const &d){
+	bool Donante::operator==(Donante const &d) const{
 		if (getNombre()==d.getNombre() && getApellidos()==d.getApellidos())
 			return true;
 		else
 			return false;
 	}
 
-	bool Donante::operator<=(Donante const &d){
+	bool Donante::operator<=(Donante const &d) const{
 		if (getApellidos()==d.getApellidos()){
 			if (getNombre()<=d.getNombre())
 				return true;

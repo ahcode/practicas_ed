@@ -26,8 +26,8 @@ namespace ed{
 			void mostrarDonante() const;
 			void modificarDonante();
 			Donante &operator=(Donante const &d);
-			bool operator==(Donante const &d);
-			bool operator<=(Donante const &d);
+			bool operator==(Donante const &d) const;
+			bool operator<=(Donante const &d) const;
 			friend std::istream &operator>>(std::istream &stream, Donante &d);
 			friend std::ostream &operator<<(std::ostream &stream, Donante const &d);
 	};
