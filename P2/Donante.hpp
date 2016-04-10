@@ -4,6 +4,7 @@
 #include <iostream>
 #include "DonanteInterfaz.hpp"
 #include "macros.hpp"
+
 namespace ed{
 	class Donante: public DonanteInterfaz{
 		private:

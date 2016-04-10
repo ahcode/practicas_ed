@@ -62,9 +62,17 @@ namespace ed{
     while(lista_.deletePosition(0));
   }
 
-  int Donantes::numDonantes(){
+  int Donantes::numDonantes() const{
     int i;
     for(i=0;lista_.isValid(i);i++);
     return i;
+  }
+
+  Donante Donantes::getDonante(int const &n) const{
+    if(lista_.isValid(n-1)){
+      return lista_.item(n-1);
+    }else{
+      throw 1;
+    }
   }
 }

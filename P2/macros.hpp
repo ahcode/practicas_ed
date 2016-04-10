@@ -12,7 +12,7 @@
 #include <cstdlib>
 
 #define LUGAR(x,y)   printf("\033[%d;%dH",x,y) //!< LUGAR
-#define BORRAR       system("clear")   //!< BORRAR
+#define BORRAR       system("tput reset")   //!< BORRAR
 #define PARPADEO     printf("%c[5m",27) //!< PARPADEO
 #define NORMAL        printf("%c[0m",27) //!< APAGA
 #define INVERSO      printf("%c[7m",27) //!< INVERSO

@@ -142,13 +142,21 @@ namespace ed{
 		std::cout << "Introduce los apellidos: ";
 		std::getline(stream,aux);
 		d.setApellidos(aux);
+		bool error=false;
 		do{
+			if(error)
+				std::cout << "  << El grupo sanguíneo no es válido >>\n";
 			std::cout << "Introduce el grupo sanguíneo: ";
 			std::getline(stream,aux);
+			error=true;
 		}while(d.setGrupo(aux)!=true);
+		error=false;
 		do{
+			if(error)
+				std::cout << "  << El factor de riesgo no es válido >>\n";
 			std::cout << "Introduce el factor RH: ";
 			std::getline(stream,aux);
+			error=true;
 		}while(d.setFRH(aux)!=true);
 		return stream;
 	}
