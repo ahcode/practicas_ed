@@ -33,7 +33,6 @@ ed::Donantes cargarFichero(std::string const &nombreFichero){
 bool grabarFichero(std::string const &nombreFichero, ed::Donantes const &lista){
   std::ofstream f(nombreFichero.c_str());
   ed::Donante d;
-  int i=1;
   if(!f.is_open())
     return false;
   for(int i=1;i<=lista.numDonantes();i++){

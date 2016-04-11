@@ -96,8 +96,9 @@ int main(){
 				d[n-1].modificarDonante();
 				break;
 			case 4:
-				for (i=0;i<3;i++)
-					cout << "Donante " << i+1 << ":\n" << d[i] << "\n";
+				for (i=0;i<3;i++){
+					NEGRITA; cout << "Donante " << i+1; NORMAL; cout << ":\n" << d[i] << "\n";
+				}
 				error=false;
 				do{
 					if(error)
