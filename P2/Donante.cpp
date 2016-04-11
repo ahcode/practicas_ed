@@ -1,3 +1,10 @@
+/*!
+\file Donante.cpp
+\brief Implementación de la clase Donante
+\author Álvaro Herrero Pérez
+\date 11/04/2016
+*/
+
 #include "Donante.hpp"
 
 namespace ed{

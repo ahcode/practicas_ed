@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Donantes: Fichero Fuente ficherosDonantes.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Donantes
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ficherosDonantes.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ficherosDonantes_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ficherosDonantes_8hpp.html">ficherosDonantes.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="ficherosDonantes_8hpp.html#a9891db608a345d4e0082c0224d5e5cdd">   10</a></span>&#160;<a class="code" href="classed_1_1Donantes.html">ed::Donantes</a> <a class="code" href="ficherosDonantes_8cpp.html#a9891db608a345d4e0082c0224d5e5cdd">cargarFichero</a>(std::string <span class="keyword">const</span> &amp;nombreFichero){</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classed_1_1Donantes.html">ed::Donantes</a> lista;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  std::ifstream f(nombreFichero.c_str());</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  std::string c;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classed_1_1Donante.html">ed::Donante</a> d;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">if</span>(!f.is_open())</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">throw</span> 1;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">while</span> (!f.eof()){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    getline(f,c);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span>(f.eof()) <span class="comment">//Para evitar errores si hay una línea en blanco al final del fichero</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    d.<a class="code" href="classed_1_1Donante.html#ac298ce82b3a3ca5b52d9147887f84407">setNombre</a>(c);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    getline(f,c);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span>(f.eof())</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    d.<a class="code" href="classed_1_1Donante.html#ac05b0fbdca837b97c532fcd295a01b6a">setApellidos</a>(c);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    getline(f,c);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span>(f.eof())</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span>(!d.<a class="code" href="classed_1_1Donante.html#ab2a5b69296a7e7b0918878e6c76c6950">setGrupo</a>(c))</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordflow">throw</span> 2;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    getline(f,c);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span>(!d.<a class="code" href="classed_1_1Donante.html#a47995a83ff75ee594cc2d8c5f03905e4">setFRH</a>(c))</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordflow">throw</span> 3;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    lista.<a class="code" href="classed_1_1Donantes.html#a40b25ad9a8345a9dfb989b313245bddc">insertarDonante</a>(d);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  f.close();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> lista;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="ficherosDonantes_8hpp.html#a6f039ce2ce064f3f14764ba65da727e5">   40</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="ficherosDonantes_8cpp.html#a6f039ce2ce064f3f14764ba65da727e5">grabarFichero</a>(std::string <span class="keyword">const</span> &amp;nombreFichero, <a class="code" href="classed_1_1Donantes.html">ed::Donantes</a> <span class="keyword">const</span> &amp;lista){</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  std::ofstream f(nombreFichero.c_str());</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="classed_1_1Donante.html">ed::Donante</a> d;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">if</span>(!f.is_open())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;=lista.<a class="code" href="classed_1_1Donantes.html#a13f5c61ed4d1d250b69e0d581477d200">numDonantes</a>();i++){</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    d=lista.<a class="code" href="classed_1_1Donantes.html#a777a5542a6cf1543b370c3bcb517b42a">getDonante</a>(i);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    f &lt;&lt; d.<a class="code" href="classed_1_1Donante.html#afb24343390842c7385c1be436631d203">getNombre</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    f &lt;&lt; d.getApellidos() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    f &lt;&lt; d.getGrupo() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    f &lt;&lt; d.getFRH() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  f.close();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="classed_1_1Donantes_html"><div class="ttname"><a href="classed_1_1Donantes.html">ed::Donantes</a></div><div class="ttdoc">Clase para almacenar y trabajar con una lista de donantes de sangre. </div><div class="ttdef"><b>Definition:</b> <a href="Donantes_8hpp_source.html#l00022">Donantes.hpp:22</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html"><div class="ttname"><a href="classed_1_1Donante.html">ed::Donante</a></div><div class="ttdoc">Clase que almacena la información de un donante de sangre. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00019">Donante.hpp:19</a></div></div>
+<div class="ttc" id="ficherosDonantes_8hpp_html"><div class="ttname"><a href="ficherosDonantes_8hpp.html">ficherosDonantes.hpp</a></div><div class="ttdoc">Definición de funciones de ficheros. </div></div>
+<div class="ttc" id="classed_1_1Donante_html_ac05b0fbdca837b97c532fcd295a01b6a"><div class="ttname"><a href="classed_1_1Donante.html#ac05b0fbdca837b97c532fcd295a01b6a">ed::Donante::setApellidos</a></div><div class="ttdeci">void setApellidos(std::string const &amp;a)</div><div class="ttdoc">Establece los apellidos al Donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00062">Donante.hpp:62</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_ab2a5b69296a7e7b0918878e6c76c6950"><div class="ttname"><a href="classed_1_1Donante.html#ab2a5b69296a7e7b0918878e6c76c6950">ed::Donante::setGrupo</a></div><div class="ttdeci">bool setGrupo(std::string const &amp;g)</div><div class="ttdoc">Establece un grupo sanguíneo al Donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00022">Donante.cpp:22</a></div></div>
+<div class="ttc" id="classed_1_1Donantes_html_a777a5542a6cf1543b370c3bcb517b42a"><div class="ttname"><a href="classed_1_1Donantes.html#a777a5542a6cf1543b370c3bcb517b42a">ed::Donantes::getDonante</a></div><div class="ttdeci">Donante getDonante(int const &amp;n) const </div><div class="ttdoc">Devuelve un donante a partir de su posición. </div><div class="ttdef"><b>Definition:</b> <a href="Donantes_8cpp_source.html#l00078">Donantes.cpp:78</a></div></div>
+<div class="ttc" id="ficherosDonantes_8cpp_html_a9891db608a345d4e0082c0224d5e5cdd"><div class="ttname"><a href="ficherosDonantes_8cpp.html#a9891db608a345d4e0082c0224d5e5cdd">cargarFichero</a></div><div class="ttdeci">ed::Donantes cargarFichero(std::string const &amp;nombreFichero)</div><div class="ttdoc">Carga un fichero de texto con una lista de donantes a un objeto Donantes. </div><div class="ttdef"><b>Definition:</b> <a href="ficherosDonantes_8cpp_source.html#l00010">ficherosDonantes.cpp:10</a></div></div>
+<div class="ttc" id="classed_1_1Donantes_html_a40b25ad9a8345a9dfb989b313245bddc"><div class="ttname"><a href="classed_1_1Donantes.html#a40b25ad9a8345a9dfb989b313245bddc">ed::Donantes::insertarDonante</a></div><div class="ttdeci">void insertarDonante(Donante const &amp;d)</div><div class="ttdoc">Inserta un objeto Donante en la lista de donantes. </div><div class="ttdef"><b>Definition:</b> <a href="Donantes_8hpp_source.html#l00056">Donantes.hpp:56</a></div></div>
+<div class="ttc" id="ficherosDonantes_8cpp_html_a6f039ce2ce064f3f14764ba65da727e5"><div class="ttname"><a href="ficherosDonantes_8cpp.html#a6f039ce2ce064f3f14764ba65da727e5">grabarFichero</a></div><div class="ttdeci">bool grabarFichero(std::string const &amp;nombreFichero, ed::Donantes const &amp;lista)</div><div class="ttdoc">Guardar un fichero de texto con la lista de donantes de un objeto Donantes. </div><div class="ttdef"><b>Definition:</b> <a href="ficherosDonantes_8cpp_source.html#l00040">ficherosDonantes.cpp:40</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_ac298ce82b3a3ca5b52d9147887f84407"><div class="ttname"><a href="classed_1_1Donante.html#ac298ce82b3a3ca5b52d9147887f84407">ed::Donante::setNombre</a></div><div class="ttdeci">void setNombre(std::string const &amp;n)</div><div class="ttdoc">Establece un nombre al Donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00056">Donante.hpp:56</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_afb24343390842c7385c1be436631d203"><div class="ttname"><a href="classed_1_1Donante.html#afb24343390842c7385c1be436631d203">ed::Donante::getNombre</a></div><div class="ttdeci">std::string getNombre() const </div><div class="ttdoc">Devuelve el nombre del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00084">Donante.hpp:84</a></div></div>
+<div class="ttc" id="classed_1_1Donantes_html_a13f5c61ed4d1d250b69e0d581477d200"><div class="ttname"><a href="classed_1_1Donantes.html#a13f5c61ed4d1d250b69e0d581477d200">ed::Donantes::numDonantes</a></div><div class="ttdeci">int numDonantes() const </div><div class="ttdoc">Devuelve el número de donantes almacenados. </div><div class="ttdef"><b>Definition:</b> <a href="Donantes_8cpp_source.html#l00072">Donantes.cpp:72</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a47995a83ff75ee594cc2d8c5f03905e4"><div class="ttname"><a href="classed_1_1Donante.html#a47995a83ff75ee594cc2d8c5f03905e4">ed::Donante::setFRH</a></div><div class="ttdeci">bool setFRH(std::string const &amp;f)</div><div class="ttdoc">Establece un factor de riesgo al Donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00039">Donante.cpp:39</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 11 de Abril de 2016 19:51:19 para Donantes por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

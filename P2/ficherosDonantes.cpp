@@ -1,3 +1,10 @@
+/*!
+\file ficherosDonantes.cpp
+\brief Implementación de funciones de ficheros
+\author Álvaro Herrero Pérez
+\date 11/04/2016
+*/
+
 #include "ficherosDonantes.hpp"
 
 ed::Donantes cargarFichero(std::string const &nombreFichero){

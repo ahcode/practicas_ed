@@ -1,0 +1,5 @@
+<map id="ed::ListaDonantes" name="ed::ListaDonantes">
+<area shape="rect" id="node2" href="$classed_1_1NodoDonante.html" title="Nodo simplemente enlazado de un objeto Donante. " alt="" coords="12,171,136,197"/>
+<area shape="rect" id="node3" href="$classed_1_1Donante.html" title="Clase que almacena la información de un donante de sangre. " alt="" coords="27,81,121,108"/>
+<area shape="rect" id="node4" href="$classed_1_1DonanteInterfaz.html" title="Interfaz para la clase Donante. " alt="" coords="5,5,143,32"/>
+</map>

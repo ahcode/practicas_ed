@@ -1,3 +1,16 @@
+/*!
+\file DonantesMain.cpp
+\brief Programa principal para probar la clase Donantes
+\author Álvaro Herrero Pérez
+\date 11/04/2016
+*/
+
+/*!
+\mainpage Práctica 2 de la asignatura Estructura de Datos
+\author Álvaro Herrero Pérez
+\date 11 de Abril de 2016
+*/
+
 #include <iostream>
 #include <string>
 #include "Donantes.hpp"
@@ -8,12 +21,19 @@ using namespace ed;
 using std::cout;
 using std::cin;
 
+/*!
+\brief Hace una pausa para que el usuario pueda ver los datos en pantalla
+\note Para continuar debe pulsar enter
+*/
 void continuar(){
   INVERSO; cout << "Presiona enter para continuar..."; NORMAL;
 	getchar();
 	BORRAR;
 }
 
+/*!
+\brief Programa principal para probar la clase Donantes
+*/
 int main(){
   BORRAR;
   Donantes donantes;

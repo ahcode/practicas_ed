@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Donantes: Fichero Fuente Donante.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Donantes
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Donante.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Donante_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef DONANTE_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define DONANTE_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="DonanteInterfaz_8hpp.html">DonanteInterfaz.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8hpp.html">macros.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceed.html">ed</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classed_1_1Donante.html">Donante</a>: <span class="keyword">public</span> <a class="code" href="classed_1_1DonanteInterfaz.html">DonanteInterfaz</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#a806dd68b9ee142efadab47f03458bfa5">   24</a></span>&#160;            std::string <a class="code" href="classed_1_1Donante.html#a806dd68b9ee142efadab47f03458bfa5">nombre_</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#a63f5f796c50eabdc3b3036f3fbd30efd">   28</a></span>&#160;            std::string <a class="code" href="classed_1_1Donante.html#a63f5f796c50eabdc3b3036f3fbd30efd">apellidos_</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#acdf7d5bd7b0a39c2e94dcc818813c87b">   32</a></span>&#160;            std::string <a class="code" href="classed_1_1Donante.html#acdf7d5bd7b0a39c2e94dcc818813c87b">grupo_</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#a481df54e4755f83f3e8576a4cba75231">   36</a></span>&#160;            std::string <a class="code" href="classed_1_1Donante.html#a481df54e4755f83f3e8576a4cba75231">frh_</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="classed_1_1Donante.html#a77da9b84144413ecf50dda1a1c1f6fe4">Donante</a>(std::string <span class="keyword">const</span> &amp;n=<span class="stringliteral">&quot;&quot;</span>, std::string <span class="keyword">const</span> &amp;a=<span class="stringliteral">&quot;&quot;</span>, std::string <span class="keyword">const</span> &amp;g=<span class="stringliteral">&quot;0&quot;</span>, std::string <span class="keyword">const</span> &amp;f=<span class="stringliteral">&quot;positivo&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="classed_1_1Donante.html#a77da9b84144413ecf50dda1a1c1f6fe4">Donante</a>(<a class="code" href="classed_1_1Donante.html">Donante</a> <span class="keyword">const</span> &amp;d);</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#ac298ce82b3a3ca5b52d9147887f84407">   56</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classed_1_1Donante.html#ac298ce82b3a3ca5b52d9147887f84407">setNombre</a>(std::string <span class="keyword">const</span> &amp;n){nombre_=n;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#ac05b0fbdca837b97c532fcd295a01b6a">   62</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classed_1_1Donante.html#ac05b0fbdca837b97c532fcd295a01b6a">setApellidos</a>(std::string <span class="keyword">const</span> &amp;a){apellidos_=a;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Donante.html#ab2a5b69296a7e7b0918878e6c76c6950">setGrupo</a>(std::string <span class="keyword">const</span> &amp;g);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Donante.html#a47995a83ff75ee594cc2d8c5f03905e4">setFRH</a>(std::string <span class="keyword">const</span> &amp;f);</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#afb24343390842c7385c1be436631d203">   84</a></span>&#160;            <span class="keyword">inline</span> std::string <a class="code" href="classed_1_1Donante.html#afb24343390842c7385c1be436631d203">getNombre</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> <a class="code" href="classed_1_1Donante.html#a806dd68b9ee142efadab47f03458bfa5">nombre_</a>;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#a172d3f0680dfe99cf640dc998f0c13c2">   90</a></span>&#160;            <span class="keyword">inline</span> std::string <a class="code" href="classed_1_1Donante.html#a172d3f0680dfe99cf640dc998f0c13c2">getApellidos</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> <a class="code" href="classed_1_1Donante.html#a63f5f796c50eabdc3b3036f3fbd30efd">apellidos_</a>;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#a53a34821671341eedd2ee2bb81b315ba">   96</a></span>&#160;            <span class="keyword">inline</span> std::string <a class="code" href="classed_1_1Donante.html#a53a34821671341eedd2ee2bb81b315ba">getGrupo</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> <a class="code" href="classed_1_1Donante.html#acdf7d5bd7b0a39c2e94dcc818813c87b">grupo_</a>;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classed_1_1Donante.html#a1b04ab720452a9ad5eb092726f6fa7fb">  102</a></span>&#160;            <span class="keyword">inline</span> std::string <a class="code" href="classed_1_1Donante.html#a1b04ab720452a9ad5eb092726f6fa7fb">getFRH</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> <a class="code" href="classed_1_1Donante.html#a481df54e4755f83f3e8576a4cba75231">frh_</a>;};</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classed_1_1Donante.html#a12931bcd4d8f7dec7edb34461c56d1c1">leerDonante</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classed_1_1Donante.html#ad72f935107b8d66327215848214f4c29">mostrarDonante</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classed_1_1Donante.html#a4ad33c83baa261d79c1881c6090856fb">modificarDonante</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="classed_1_1Donante.html">Donante</a> &amp;<a class="code" href="classed_1_1Donante.html#ad8866672cb11fe890d40f0c319559595">operator=</a>(<a class="code" href="classed_1_1Donante.html">Donante</a> <span class="keyword">const</span> &amp;d);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Donante.html#a2d84c76bc19423aaddfc30f79c052e79">operator==</a>(<a class="code" href="classed_1_1Donante.html">Donante</a> <span class="keyword">const</span> &amp;d) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Donante.html#a040569b3f166a29df595e4f04b7a4308">operator&lt;=</a>(<a class="code" href="classed_1_1Donante.html">Donante</a> <span class="keyword">const</span> &amp;d) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keyword">friend</span> std::istream &amp;<a class="code" href="classed_1_1Donante.html#acbd1fb64ad57f44d7c558c5035f5792a">operator&gt;&gt;</a>(std::istream &amp;stream, <a class="code" href="classed_1_1Donante.html">Donante</a> &amp;d);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keyword">friend</span> std::ostream &amp;<a class="code" href="classed_1_1Donante.html#ab52eb93adf74c23cd988ea8868a08fa0">operator&lt;&lt;</a>(std::ostream &amp;stream, <a class="code" href="classed_1_1Donante.html">Donante</a> <span class="keyword">const</span> &amp;d);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    };</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classed_1_1Donante_html_ad72f935107b8d66327215848214f4c29"><div class="ttname"><a href="classed_1_1Donante.html#ad72f935107b8d66327215848214f4c29">ed::Donante::mostrarDonante</a></div><div class="ttdeci">void mostrarDonante() const </div><div class="ttdoc">Muestra por pantalla los datos de un donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00054">Donante.cpp:54</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a040569b3f166a29df595e4f04b7a4308"><div class="ttname"><a href="classed_1_1Donante.html#a040569b3f166a29df595e4f04b7a4308">ed::Donante::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(Donante const &amp;d) const </div><div class="ttdoc">Compara Nombre y Apellido de dos donantes. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00130">Donante.cpp:130</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html"><div class="ttname"><a href="classed_1_1Donante.html">ed::Donante</a></div><div class="ttdoc">Clase que almacena la información de un donante de sangre. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00019">Donante.hpp:19</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a1b04ab720452a9ad5eb092726f6fa7fb"><div class="ttname"><a href="classed_1_1Donante.html#a1b04ab720452a9ad5eb092726f6fa7fb">ed::Donante::getFRH</a></div><div class="ttdeci">std::string getFRH() const </div><div class="ttdoc">Devuelve el factor de riesgo del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00102">Donante.hpp:102</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_ac05b0fbdca837b97c532fcd295a01b6a"><div class="ttname"><a href="classed_1_1Donante.html#ac05b0fbdca837b97c532fcd295a01b6a">ed::Donante::setApellidos</a></div><div class="ttdeci">void setApellidos(std::string const &amp;a)</div><div class="ttdoc">Establece los apellidos al Donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00062">Donante.hpp:62</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_ab2a5b69296a7e7b0918878e6c76c6950"><div class="ttname"><a href="classed_1_1Donante.html#ab2a5b69296a7e7b0918878e6c76c6950">ed::Donante::setGrupo</a></div><div class="ttdeci">bool setGrupo(std::string const &amp;g)</div><div class="ttdoc">Establece un grupo sanguíneo al Donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00022">Donante.cpp:22</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a53a34821671341eedd2ee2bb81b315ba"><div class="ttname"><a href="classed_1_1Donante.html#a53a34821671341eedd2ee2bb81b315ba">ed::Donante::getGrupo</a></div><div class="ttdeci">std::string getGrupo() const </div><div class="ttdoc">Devuelve el grupo sanguíneo del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00096">Donante.hpp:96</a></div></div>
+<div class="ttc" id="DonanteInterfaz_8hpp_html"><div class="ttname"><a href="DonanteInterfaz_8hpp.html">DonanteInterfaz.hpp</a></div><div class="ttdoc">Interfaz para la clase Donante. </div></div>
+<div class="ttc" id="classed_1_1DonanteInterfaz_html"><div class="ttname"><a href="classed_1_1DonanteInterfaz.html">ed::DonanteInterfaz</a></div><div class="ttdoc">Interfaz para la clase Donante. </div><div class="ttdef"><b>Definition:</b> <a href="DonanteInterfaz_8hpp_source.html#l00015">DonanteInterfaz.hpp:15</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_ab52eb93adf74c23cd988ea8868a08fa0"><div class="ttname"><a href="classed_1_1Donante.html#ab52eb93adf74c23cd988ea8868a08fa0">ed::Donante::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;stream, Donante const &amp;d)</div><div class="ttdoc">Muestra por pantalla los datos de un donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00171">Donante.cpp:171</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a2d84c76bc19423aaddfc30f79c052e79"><div class="ttname"><a href="classed_1_1Donante.html#a2d84c76bc19423aaddfc30f79c052e79">ed::Donante::operator==</a></div><div class="ttdeci">bool operator==(Donante const &amp;d) const </div><div class="ttdoc">Compara Nombre y Apellido de dos donantes. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00123">Donante.cpp:123</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a806dd68b9ee142efadab47f03458bfa5"><div class="ttname"><a href="classed_1_1Donante.html#a806dd68b9ee142efadab47f03458bfa5">ed::Donante::nombre_</a></div><div class="ttdeci">std::string nombre_</div><div class="ttdoc">Almacena el nombre del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00024">Donante.hpp:24</a></div></div>
+<div class="ttc" id="namespaceed_html"><div class="ttname"><a href="namespaceed.html">ed</a></div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00010">Donante.cpp:10</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_acbd1fb64ad57f44d7c558c5035f5792a"><div class="ttname"><a href="classed_1_1Donante.html#acbd1fb64ad57f44d7c558c5035f5792a">ed::Donante::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;stream, Donante &amp;d)</div><div class="ttdoc">Pregunta por pantalla los datos de un donante y los almacena. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00144">Donante.cpp:144</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_ad8866672cb11fe890d40f0c319559595"><div class="ttname"><a href="classed_1_1Donante.html#ad8866672cb11fe890d40f0c319559595">ed::Donante::operator=</a></div><div class="ttdeci">Donante &amp; operator=(Donante const &amp;d)</div><div class="ttdoc">Iguala dos donantes. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00115">Donante.cpp:115</a></div></div>
+<div class="ttc" id="macros_8hpp_html"><div class="ttname"><a href="macros_8hpp.html">macros.hpp</a></div><div class="ttdoc">Macros usadas para el menu. </div></div>
+<div class="ttc" id="classed_1_1Donante_html_a4ad33c83baa261d79c1881c6090856fb"><div class="ttname"><a href="classed_1_1Donante.html#a4ad33c83baa261d79c1881c6090856fb">ed::Donante::modificarDonante</a></div><div class="ttdeci">void modificarDonante()</div><div class="ttdoc">Pregunta que dato modificar y luego lo pide por pantalla. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00058">Donante.cpp:58</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a77da9b84144413ecf50dda1a1c1f6fe4"><div class="ttname"><a href="classed_1_1Donante.html#a77da9b84144413ecf50dda1a1c1f6fe4">ed::Donante::Donante</a></div><div class="ttdeci">Donante(std::string const &amp;n=&quot;&quot;, std::string const &amp;a=&quot;&quot;, std::string const &amp;g=&quot;0&quot;, std::string const &amp;f=&quot;positivo&quot;)</div><div class="ttdoc">Constructor de la clase Donante, se puede llamar con parámetros por defecto. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00011">Donante.cpp:11</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a481df54e4755f83f3e8576a4cba75231"><div class="ttname"><a href="classed_1_1Donante.html#a481df54e4755f83f3e8576a4cba75231">ed::Donante::frh_</a></div><div class="ttdeci">std::string frh_</div><div class="ttdoc">Almacena el factor de riesgo del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00036">Donante.hpp:36</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_ac298ce82b3a3ca5b52d9147887f84407"><div class="ttname"><a href="classed_1_1Donante.html#ac298ce82b3a3ca5b52d9147887f84407">ed::Donante::setNombre</a></div><div class="ttdeci">void setNombre(std::string const &amp;n)</div><div class="ttdoc">Establece un nombre al Donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00056">Donante.hpp:56</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_afb24343390842c7385c1be436631d203"><div class="ttname"><a href="classed_1_1Donante.html#afb24343390842c7385c1be436631d203">ed::Donante::getNombre</a></div><div class="ttdeci">std::string getNombre() const </div><div class="ttdoc">Devuelve el nombre del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00084">Donante.hpp:84</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_acdf7d5bd7b0a39c2e94dcc818813c87b"><div class="ttname"><a href="classed_1_1Donante.html#acdf7d5bd7b0a39c2e94dcc818813c87b">ed::Donante::grupo_</a></div><div class="ttdeci">std::string grupo_</div><div class="ttdoc">Almacena el grupo sanguíneo del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00032">Donante.hpp:32</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a12931bcd4d8f7dec7edb34461c56d1c1"><div class="ttname"><a href="classed_1_1Donante.html#a12931bcd4d8f7dec7edb34461c56d1c1">ed::Donante::leerDonante</a></div><div class="ttdeci">void leerDonante()</div><div class="ttdoc">Pregunta por pantalla los datos de un donante y los almacena. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00050">Donante.cpp:50</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a63f5f796c50eabdc3b3036f3fbd30efd"><div class="ttname"><a href="classed_1_1Donante.html#a63f5f796c50eabdc3b3036f3fbd30efd">ed::Donante::apellidos_</a></div><div class="ttdeci">std::string apellidos_</div><div class="ttdoc">Almacena los apellidos del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00028">Donante.hpp:28</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a172d3f0680dfe99cf640dc998f0c13c2"><div class="ttname"><a href="classed_1_1Donante.html#a172d3f0680dfe99cf640dc998f0c13c2">ed::Donante::getApellidos</a></div><div class="ttdeci">std::string getApellidos() const </div><div class="ttdoc">Devuelve los apellidos del donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00090">Donante.hpp:90</a></div></div>
+<div class="ttc" id="classed_1_1Donante_html_a47995a83ff75ee594cc2d8c5f03905e4"><div class="ttname"><a href="classed_1_1Donante.html#a47995a83ff75ee594cc2d8c5f03905e4">ed::Donante::setFRH</a></div><div class="ttdeci">bool setFRH(std::string const &amp;f)</div><div class="ttdoc">Establece un factor de riesgo al Donante. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00039">Donante.cpp:39</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 11 de Abril de 2016 19:51:19 para Donantes por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

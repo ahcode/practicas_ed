@@ -1,3 +1,10 @@
+/*!
+\file DonanteMain.cpp
+\brief Programa de prueba para la clase Donante
+\author Álvaro Herrero Pérez
+\date 11/04/2016
+*/
+
 #include <iostream>
 #include "Donante.hpp"
 #include "macros.hpp"
@@ -6,7 +13,9 @@ using namespace ed;
 using std::cout;
 using std::cin;
 
-
+/*!
+\brief Programa principal para probar la clase Donante
+*/
 int main(){
 	BORRAR;
 	Donante d[3];
