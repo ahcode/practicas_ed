@@ -1,0 +1,6 @@
+#ifndef MONTICULODONANTESINTERFAZ_HPP
+#define MONTICULODONANTESINTERFAZ_HPP
+
+#include "Donante.hpp"
+
+#endif

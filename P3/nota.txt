@@ -1,0 +1,5 @@
+Raiz = 1
+Hijo izq del nodo i = 2*i
+Hijo der del nodo i = 2*i+1
+Padre = |i/2|
+Tamaño = 2^(h+1)-1 con h=altura máx
