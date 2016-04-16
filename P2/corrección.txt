@@ -1,0 +1,26 @@
+Profesor: Nicolas Luis Fernandez Garcia
+Nota: 9/10
+
++ Compilación: sin errores
+
++ Ejecución:
+
+   Donante: bien, pero se puede mejorar la opción de modificacion del donante para poder modificar más de un atributo en la misma iteración
+
+   Donantes: bien y añadido nuevas opciones al menú
+
+ 
+
++ Código:
+
+   Por modularidad, es deseable codificar cada clase en un fichero diferente --> NodoDonante
+
+  Se puede mejorar la funcion para insertar si el donante tiene el mismo nombre y apellidos que otro ya existente.
+
++ Makefile: correcto, pero se puede mejorar
+
+CPPFLAGS = -c -g -Wall -ansi
+
+ 
+
++ Doxygen: bien, no se generan avisos.
