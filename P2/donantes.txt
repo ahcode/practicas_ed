@@ -1,0 +1,20 @@
+a
+a
+A
+Negativo
+b
+b
+B
+Positivo
+c
+c
+AB
+Negativo
+ruben
+cozar aragones
+0
+Negativo
+pedro
+qòweihjp iuhndsfg
+0
+Positivo
