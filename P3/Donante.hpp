@@ -45,8 +45,9 @@ namespace ed{
 			\param a (Apellidos) de tipo string, valor por defecto ""
 			\param g (Grupo Sanguíneo) de tipo string, valor por defecto "0"
 			\param f (Factor de Riesgo) de tipo string, valor por defecto "positivo"
+			\param d (Donaciones) de tipo int, valor por defecto 0
 			*/
-			Donante(std::string const &n="", std::string const &a="", std::string const &g="0", std::string const &f="positivo");
+			Donante(std::string const &n="", std::string const &a="", std::string const &g="0", std::string const &f="positivo", int const &d=0);
 			/*!
 			\brief Constructor de copia de la clase Donante
 			\param d (Donante) de tipo Donante

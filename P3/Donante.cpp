@@ -8,11 +8,12 @@
 #include "Donante.hpp"
 
 namespace ed{
-	Donante::Donante(std::string const &n, std::string const &a, std::string const &g, std::string const &f){
+	Donante::Donante(std::string const &n, std::string const &a, std::string const &g, std::string const &f, int const &d){
 		setNombre(n);
 		setApellidos(a);
 		setGrupo(g);
 		setFRH(f);
+		setDonaciones(d);
 	}
 
 	Donante::Donante(Donante const &d){

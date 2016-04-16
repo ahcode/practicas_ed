@@ -8,9 +8,9 @@
 namespace ed{
 	class MonticuloDonantes: public MonticuloDonantesInterfaz{
 		private:
-			std::vector<Donante> vector_(0);
+			std::vector<Donante> vector_;
 		public:
-			MonticuloDonantes(){};
+			MonticuloDonantes() : vector_(0){};
 			inline bool vacio() const{return vector_.empty();};
 			Donante cima() const;
 			void insertar(Donante d);

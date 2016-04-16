@@ -1,7 +1,7 @@
 #include "MonticuloDonantes.hpp"
 
-using namespace ed{
-	Donante cima() const{
+namespace ed{
+	Donante MonticuloDonantes::cima() const{
 		if (vacio())
 			throw 1;
 		else
