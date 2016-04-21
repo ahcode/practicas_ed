@@ -1,3 +1,10 @@
+/*!
+\file MonticuloDonantesInterfaz.hpp
+\brief Interfaz para la clase MonticuloDonantes
+\author Álvaro Herrero Pérez
+\date 18/04/2016
+*/
+
 #ifndef MONTICULODONANTESINTERFAZ_HPP
 #define MONTICULODONANTESINTERFAZ_HPP
 
