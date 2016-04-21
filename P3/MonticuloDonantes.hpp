@@ -9,6 +9,7 @@
 #define MONTICULODONANTES_HPP
 
 #include <vector>
+#include <fstream>
 #include "MonticuloDonantesInterfaz.hpp"
 #include "Donante.hpp"
 
@@ -27,6 +28,8 @@ namespace ed{
 			Donante cima() const;
 			void insertar(Donante const &d);
 			bool borrar();
+			void cargarFichero(std::string const &nombreFichero);
+			bool grabarFichero(std::string const &nombreFichero);
 	};
 }
 

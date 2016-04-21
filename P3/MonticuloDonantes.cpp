@@ -51,4 +51,57 @@ namespace ed{
 		hundir(0);
 		return true;
 	}
+
+	void MonticuloDonantes::cargarFichero(std::string const &nombreFichero){
+		vector_.clear();
+		std::ifstream f(nombreFichero.c_str());
+		std::string c;
+		ed::Donante d;
+		if(!f.is_open())
+			throw 1;
+		while (!f.eof()){
+			getline(f,c);
+			if(f.eof()) //Para evitar errores si hay una línea en blanco al final del fichero
+				break;
+			d.setNombre(c);
+			getline(f,c);
+			if(f.eof())
+				break;
+			d.setApellidos(c);
+			getline(f,c);
+			if(f.eof())
+				break;
+			if(!d.setGrupo(c))
+				throw 2;
+			getline(f,c);
+			if(f.eof())
+				break;
+			if(!d.setFRH(c))
+				throw 3;
+			getline(f,c);
+			if(f.eof())
+				break;
+			if(!d.setDonaciones(atoi(c.c_str())))
+				throw 4;
+			insertar(d);
+		}
+		f.close();
+	}
+
+	bool MonticuloDonantes::grabarFichero(std::string const &nombreFichero){
+	  std::ofstream f(nombreFichero.c_str());
+	  ed::Donante d;
+	  if(!f.is_open())
+		return false;
+	  for(int i=0;i<(int)vector_.size();i++){
+		d=cima();
+		borrar();
+		f << d.getNombre() << "\n";
+		f << d.getApellidos() << "\n";
+		f << d.getGrupo() << "\n";
+		f << d.getFRH() << "\n";
+	  }
+	  f.close();
+	  return true;
+	}
 }
