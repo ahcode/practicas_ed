@@ -15,8 +15,8 @@ namespace ed{
 		public:
 			virtual bool vacio() const=0;
 			virtual Donante cima() const=0;
-			virtual void insertar(Donante d)=0;
-			virtual void borrar(Donante d)=0;
+			virtual void insertar(Donante const &d)=0;
+			virtual bool borrar()=0;
 	};
 }
 

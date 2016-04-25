@@ -183,6 +183,7 @@ namespace ed{
 		stream << "Apellidos: " << d.getApellidos() << "\n";
 		stream << "Grupo sanguíneo: " << d.getGrupo() << "\n";
 		stream << "Factor RH: " << d.getFRH() << "\n";
+		stream << "Número de donaciones: " << d.getDonaciones() << "\n";
 		return stream;
 	}
 }

@@ -28,6 +28,7 @@ namespace ed{
 			Donante cima() const;
 			void insertar(Donante const &d);
 			bool borrar();
+			bool donar();
 			void cargarFichero(std::string const &nombreFichero);
 			bool grabarFichero(std::string const &nombreFichero);
 	};

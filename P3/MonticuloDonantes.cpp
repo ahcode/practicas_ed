@@ -17,7 +17,7 @@ namespace ed{
 	void MonticuloDonantes::flotar(int const &pos){
 		Donante aux;
 		int n=pos;
-		while (vector_[padre(n)]<=vector_[n] && n!=0){
+		while (vector_[n]<=vector_[padre(n)] && n!=0){
 			aux=vector_[n];
 			vector_[n]=vector_[padre(n)];
 			vector_[padre(n)]=aux;
@@ -26,9 +26,9 @@ namespace ed{
 	}
 	void MonticuloDonantes::hundir(int const &pos){
 		int n=pos;
-		if (hijoIzq(pos)<(int)vector_.size() && vector_[n]<=vector_[hijoIzq(pos)])
+		if (hijoIzq(pos)<(int)vector_.size() && vector_[hijoIzq(pos)]<=vector_[n])
 			n=hijoIzq(pos);
-		if (hijoDer(pos)<(int)vector_.size() && vector_[n]<=vector_[hijoDer(pos)])
+		if (hijoDer(pos)<(int)vector_.size() && vector_[hijoDer(pos)]<=vector_[n])
 			n=hijoDer(pos);
 		if (n!=pos){
 			Donante aux;
@@ -50,6 +50,13 @@ namespace ed{
 		vector_.pop_back();
 		hundir(0);
 		return true;
+	}
+
+	bool MonticuloDonantes::donar(){
+		if (vacio())
+			return false;
+		vector_[0].setDonaciones(vector_[0].getDonaciones()+1);
+		hundir(0);
 	}
 
 	void MonticuloDonantes::cargarFichero(std::string const &nombreFichero){
