@@ -48,10 +48,11 @@ int main(){
 			NEGRITA; cout << "2."; NORMAL; cout << " Cargar donantes desde fichero\n";
 			NEGRITA; cout << "3."; NORMAL; cout << " Grabar donantes en fichero\n";
       NEGRITA; cout << "4."; NORMAL; cout << " Insertar donante\n";
-			NEGRITA; cout << "4."; NORMAL; cout << " Mostrar el donante en la cima\n";
-      NEGRITA; cout << "5."; NORMAL; cout << " Realizar donaciones\n";
-      NEGRITA; cout << "7."; NORMAL; cout << " Vaciar montículo\n";
-			NEGRITA; cout << "6."; NORMAL; cout << " Salir\n\n";
+			NEGRITA; cout << "5."; NORMAL; cout << " Mostrar el donante en la cima\n";
+      NEGRITA; cout << "6."; NORMAL; cout << " Realizar donaciones\n";
+      NEGRITA; cout << "7."; NORMAL; cout << " Borrar la cima\n";
+      NEGRITA; cout << "8."; NORMAL; cout << " Vaciar montículo\n";
+			NEGRITA; cout << "9."; NORMAL; cout << " Salir\n\n";
       if(error)
 				cout << "<< La opción introducida no es válida >>";
 			SUBRAYADO; cout << "\nOpción"; NORMAL; cout << " = ";
@@ -59,7 +60,7 @@ int main(){
       cin.ignore(256,'\n');
 			BORRAR;
 			error=true;
-    }while(op<1 || op>6);
+    }while(op<1 || op>9);
 
     switch(op){
       case 1:
@@ -99,7 +100,6 @@ int main(){
         }
         NEGRITA; cout << "\nEl fichero ha sido cargado\n\n"; NORMAL;
         continuar();
-        BORRAR;
         break;
       case 3:
         SUBRAYADO; cout << "\nNombre del fichero"; NORMAL; cout << " = ";
@@ -112,35 +112,65 @@ int main(){
           cout << "\n<< Error al crear el fichero >>\n\n";
         }
         continuar();
-        BORRAR;
         break;
       case 4:
-        NEGRITA; cout << "La cima es: \n"; NORMAL;
-        cout << monticulo.cima();
-        BORRAR;
+        cin >> d;
+        monticulo.insertar(d);
+        NEGRITA; cout << "\nEl donante ha sido añadido al montículo\n\n"; NORMAL;
+        continuar();
         break;
       case 5:
-        error=false;
-        do{
-          if(error)
-						cout << "<< Número de donaciones incorrecto >>";
-          SUBRAYADO; cout << "\n\n¿Cuantas donaciones se van a realizar?"; NORMAL; cout << " = ";
-					cin >> n;
-					cin.ignore(256,'\n');
-					error=true;
-					BORRAR;
-        }while(n<0);
-        BORRAR;
-        for (int i=0;i<n;i++)
-          monticulo.donar();
-        NEGRITA; cout << "Donaciones realizadas\n\n";
-        cout << "Ahora la cima es:\n"; NORMAL;
-        cout << monticulo.cima();
-        BORRAR;
+        try{
+          d=monticulo.cima();
+          NEGRITA; cout << "La cima es: \n"; NORMAL;
+          cout << d;
+          cout << "\n";
+        }catch(int i){
+          NEGRITA; cout << "\nEl montículo está vacío\n\n"; NORMAL;
+        }
+        continuar();
         break;
       case 6:
+        if (!monticulo.vacio()){
+          error=false;
+          do{
+            if(error)
+  						cout << "<< Número de donaciones incorrecto >>";
+            SUBRAYADO; cout << "\n¿Cuantas donaciones se van a realizar?"; NORMAL; cout << " = ";
+  					cin >> n;
+  					cin.ignore(256,'\n');
+  					error=true;
+  					BORRAR;
+          }while(n<0);
+          for (int i=0;i<n;i++)
+            monticulo.donar();
+          NEGRITA; cout << "Donaciones realizadas\n\n";
+          cout << "Ahora la cima es:\n\n"; NORMAL;
+          cout << monticulo.cima();
+          cout << "\n";
+        }else{
+          NEGRITA; cout << "\nEl montículo está vacío\n\n"; NORMAL;
+        }
+        continuar();
+        break;
+      case 7:
+        if(monticulo.vacio()){
+          NEGRITA; cout << "\nNo hay donantes almacenados\n\n"; NORMAL;
+        }else{
+          monticulo.borrar();
+          NEGRITA; cout << "\nLa cima ha sido eliminada\n\n"; NORMAL;
+        }
+        continuar();
+        break;
+      case 8:
+        monticulo.vaciar();
+        NEGRITA; cout << "\nTodos los donantes han sido eliminados\n\n"; NORMAL;
+        continuar();
+        break;
+      case 9:
         salir=true;
         break;
     }
   }while(!salir);
+  return 0;
 }

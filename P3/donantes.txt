@@ -1,0 +1,15 @@
+Ruben
+Cozar Aragones
+AB
+Positivo
+13
+Eustaquio
+Ramirez
+B
+Negativo
+16
+Alvar
+Herrero Perez
+A
+Negativo
+15

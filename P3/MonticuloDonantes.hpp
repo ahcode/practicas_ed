@@ -29,6 +29,7 @@ namespace ed{
 			void insertar(Donante const &d);
 			bool borrar();
 			bool donar();
+			void vaciar(){vector_.clear();};
 			void cargarFichero(std::string const &nombreFichero);
 			bool grabarFichero(std::string const &nombreFichero);
 	};

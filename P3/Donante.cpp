@@ -133,6 +133,7 @@ namespace ed{
 		setApellidos(d.getApellidos());
 		setGrupo(d.getGrupo());
 		setFRH(d.getFRH());
+		setDonaciones(d.getDonaciones());
 		return *this;
 	}
 
@@ -175,6 +176,14 @@ namespace ed{
 			std::getline(stream,aux);
 			error=true;
 		}while(d.setFRH(aux)!=true);
+		error=false;
+		do{
+			if(error)
+				std::cout << "  << El número de donaciones no es válido >>\n";
+			std::cout << "Introduce el número de donaciones: ";
+			std::getline(stream,aux);
+			error=true;
+		}while(d.setDonaciones(atoi(aux.c_str()))!=true);
 		return stream;
 	}
 

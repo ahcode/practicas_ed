@@ -57,6 +57,7 @@ namespace ed{
 			return false;
 		vector_[0].setDonaciones(vector_[0].getDonaciones()+1);
 		hundir(0);
+		return true;
 	}
 
 	void MonticuloDonantes::cargarFichero(std::string const &nombreFichero){
@@ -101,12 +102,11 @@ namespace ed{
 	  if(!f.is_open())
 		return false;
 	  for(int i=0;i<(int)vector_.size();i++){
-		d=cima();
-		borrar();
-		f << d.getNombre() << "\n";
-		f << d.getApellidos() << "\n";
-		f << d.getGrupo() << "\n";
-		f << d.getFRH() << "\n";
+		f << vector_[i].getNombre() << "\n";
+		f << vector_[i].getApellidos() << "\n";
+		f << vector_[i].getGrupo() << "\n";
+		f << vector_[i].getFRH() << "\n";
+		f << vector_[i].getDonaciones() << "\n";
 	  }
 	  f.close();
 	  return true;
