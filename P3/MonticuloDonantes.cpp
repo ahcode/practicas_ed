@@ -40,12 +40,14 @@ namespace ed{
 	}
 	void MonticuloDonantes::insertar(Donante const &d){
 		int pos = vector_.size();
+		//insertar en la última hoja
 		vector_.push_back(d);
 		flotar(pos);
 	}
 	bool MonticuloDonantes::borrar(){
 		if (vacio())
 			return false;
+		//borrar la raiz
 		vector_[0]=vector_[vector_.size()-1];
 		vector_.pop_back();
 		hundir(0);

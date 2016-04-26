@@ -1,15 +1,35 @@
+Esther
+Delgado Perez
+B
+Positivo
+7
 Ruben
 Cozar Aragones
 AB
 Positivo
 13
-Eustaquio
-Ramirez
+Silvia
+Caballero Aguilar
+0
+Positivo
+13
+Alberto
+Martinez Ramirez
 B
 Negativo
 16
-Alvar
+Jose Antonio
+Comino García
+A
+Negativo
+14
+Alvaro
 Herrero Perez
 A
 Negativo
 15
+Marta
+Huertas Jimenez
+0
+Negativo
+20

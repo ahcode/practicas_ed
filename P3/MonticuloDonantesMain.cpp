@@ -102,14 +102,18 @@ int main(){
         continuar();
         break;
       case 3:
-        SUBRAYADO; cout << "\nNombre del fichero"; NORMAL; cout << " = ";
-        getline(cin, cad);
-        BORRAR;
-        if(monticulo.grabarFichero(cad)){
-          NEGRITA; cout << "\nFichero creado\n\n"; NORMAL;
+        if (monticulo.vacio()){
+          NEGRITA; cout << "\nEl montículo está vacío\n\n"; NORMAL;
         }else{
-          NEGRITA; cout << "\nFichero no creado"; NORMAL;
-          cout << "\n<< Error al crear el fichero >>\n\n";
+          SUBRAYADO; cout << "\nNombre del fichero"; NORMAL; cout << " = ";
+          getline(cin, cad);
+          BORRAR;
+          if(monticulo.grabarFichero(cad)){
+            NEGRITA; cout << "\nFichero creado\n\n"; NORMAL;
+          }else{
+            NEGRITA; cout << "\nFichero no creado"; NORMAL;
+            cout << "\n<< Error al crear el fichero >>\n\n";
+          }
         }
         continuar();
         break;

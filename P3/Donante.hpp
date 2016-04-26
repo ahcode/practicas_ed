@@ -136,11 +136,6 @@ namespace ed{
 			*/
 			void modificarDonante();
 			/*!
-			\brief Compara nombre y apellidos de un donante para saber si es el mismo
-			\return bool, true si los donantes son iguales y false si no lo son
-			*/
-			bool mismoDonante(Donante const &d);
-			/*!
 			\brief Iguala dos donantes
 			*/
 			Donante &operator=(Donante const &d);

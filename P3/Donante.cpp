@@ -121,13 +121,6 @@ namespace ed{
 		}
 	}
 
-	bool Donante::mismoDonante(Donante const &d){
-		if (getNombre()==d.getNombre() && getApellidos()==d.getApellidos())
-			return true;
-		else
-			return false;
-	}
-
 	Donante &Donante::operator=(Donante const &d){
 		setNombre(d.getNombre());
 		setApellidos(d.getApellidos());

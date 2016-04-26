@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Donantes: Fichero Fuente MonticuloDonantesMain.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Donantes
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">MonticuloDonantesMain.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="MonticuloDonantesMain_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MonticuloDonantes_8hpp.html">MonticuloDonantes.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Donante_8hpp.html">Donante.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8hpp.html">macros.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceed.html">ed</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> std::cout;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using</span> std::cin;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>(){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="macros_8hpp.html#ac6cb5eae7b643f5d13c9d546e81dbcaf">INVERSO</a>; cout &lt;&lt; <span class="stringliteral">&quot;Presiona enter para continuar...&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    getchar();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">BORRAR</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="MonticuloDonantesMain_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   37</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="MonticuloDonantesMain_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">BORRAR</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classed_1_1MonticuloDonantes.html">MonticuloDonantes</a> monticulo;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classed_1_1Donante.html">Donante</a> d;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">int</span> op, n;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  std::string cad;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">bool</span> error, salir=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    error=0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;1.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Comprobar si el montículo está vacío\n&quot;</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;2.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Cargar donantes desde fichero\n&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;3.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Grabar donantes en fichero\n&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;4.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Insertar donante\n&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;5.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Mostrar el donante en la cima\n&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;6.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Realizar donaciones\n&quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;7.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Borrar la cima\n&quot;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;8.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Vaciar montículo\n&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;9.&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; Salir\n\n&quot;</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keywordflow">if</span>(error)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;&lt;&lt; La opción introducida no es válida &gt;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="macros_8hpp.html#a3ab8b4157fd29a2336c702b26a967bb9">SUBRAYADO</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nOpción&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; = &quot;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            cin &gt;&gt; op;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      cin.ignore(256,<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">BORRAR</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            error=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }<span class="keywordflow">while</span>(op&lt;1 || op&gt;9);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">switch</span>(op){</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span>(monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a64f1d01c25a4a8736f485bb236936ea5">vacio</a>()){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nNo hay donantes almacenados\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nHay donantes almacenados\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="macros_8hpp.html#a3ab8b4157fd29a2336c702b26a967bb9">SUBRAYADO</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nNombre del fichero&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; = &quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        getline(cin, cad);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">BORRAR</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#ac578c913b4af803b8754d5709a8fd419">cargarFichero</a>(cad);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }<span class="keywordflow">catch</span>(<span class="keywordtype">int</span> i){</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nEl fichero no ha sido cargado\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          <span class="keywordflow">switch</span>(i){</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;              cout &lt;&lt; <span class="stringliteral">&quot;&lt;&lt; Error al abrir el fichero &gt;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;              <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;              cout &lt;&lt; <span class="stringliteral">&quot;&lt;&lt; Error al intentar añadir un grupo sanguíneo no válido &gt;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;              <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;              cout &lt;&lt; <span class="stringliteral">&quot;&lt;&lt; Error al intentar añadir un factor de riesgo no válido &gt;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;              <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;              cout &lt;&lt; <span class="stringliteral">&quot;&lt;&lt; Error al intentar añadir un número de donaciones no válido &gt;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;              <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          cout &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          <a class="code" href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">BORRAR</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nEl fichero ha sido cargado\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="macros_8hpp.html#a3ab8b4157fd29a2336c702b26a967bb9">SUBRAYADO</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nNombre del fichero&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; = &quot;</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        getline(cin, cad);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">BORRAR</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span>(monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a21bc9b63d9234c2c992e86fd46a82831">grabarFichero</a>(cad)){</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nFichero creado\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nFichero no creado&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          cout &lt;&lt; <span class="stringliteral">&quot;\n&lt;&lt; Error al crear el fichero &gt;&gt;\n\n&quot;</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        cin &gt;&gt; d;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a6d0da00df30d7d0d4d060c92d149891f">insertar</a>(d);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nEl donante ha sido añadido al montículo\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;          d=monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a6dac172f0b6838862af90f84a3a8e0a4">cima</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;La cima es: \n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;          cout &lt;&lt; d;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;          cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }<span class="keywordflow">catch</span>(<span class="keywordtype">int</span> i){</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nEl montículo está vacío\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">if</span> (!monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a64f1d01c25a4a8736f485bb236936ea5">vacio</a>()){</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;          error=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;          <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">if</span>(error)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                        cout &lt;&lt; <span class="stringliteral">&quot;&lt;&lt; Número de donaciones incorrecto &gt;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <a class="code" href="macros_8hpp.html#a3ab8b4157fd29a2336c702b26a967bb9">SUBRAYADO</a>; cout &lt;&lt; <span class="stringliteral">&quot;\n¿Cuantas donaciones se van a realizar?&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>; cout &lt;&lt; <span class="stringliteral">&quot; = &quot;</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    cin &gt;&gt; n;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                    cin.ignore(256,<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    error=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    <a class="code" href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">BORRAR</a>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          }<span class="keywordflow">while</span>(n&lt;0);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0;i&lt;n;i++)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a137294c8561be195bdfd0f289f14f2a5">donar</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;Donaciones realizadas\n\n&quot;</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;          cout &lt;&lt; <span class="stringliteral">&quot;Ahora la cima es:\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;          cout &lt;&lt; monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a6dac172f0b6838862af90f84a3a8e0a4">cima</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;          cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nEl montículo está vacío\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordflow">case</span> 7:</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">if</span>(monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a64f1d01c25a4a8736f485bb236936ea5">vacio</a>()){</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nNo hay donantes almacenados\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;          monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#a297d823d6ba807886fd8238d368896ca">borrar</a>();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;          <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nLa cima ha sido eliminada\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        monticulo.<a class="code" href="classed_1_1MonticuloDonantes.html#acf5e1a71bf334b2363582c5212cd674e">vaciar</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a>; cout &lt;&lt; <span class="stringliteral">&quot;\nTodos los donantes han sido eliminados\n\n&quot;</span>; <a class="code" href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <a class="code" href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a>();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordflow">case</span> 9:</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        salir=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }<span class="keywordflow">while</span>(!salir);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<div class="ttc" id="classed_1_1Donante_html"><div class="ttname"><a href="classed_1_1Donante.html">ed::Donante</a></div><div class="ttdoc">Clase que almacena la información de un donante de sangre. </div><div class="ttdef"><b>Definition:</b> <a href="Donante_8hpp_source.html#l00019">Donante.hpp:19</a></div></div>
+<div class="ttc" id="macros_8hpp_html_a79bf316fce01e63d76dddcdcbe72ab1c"><div class="ttname"><a href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">BORRAR</a></div><div class="ttdeci">#define BORRAR</div><div class="ttdoc">BORRAR. </div><div class="ttdef"><b>Definition:</b> <a href="macros_8hpp_source.html#l00015">macros.hpp:15</a></div></div>
+<div class="ttc" id="macros_8hpp_html_a8f1f26490cd84e6dd2636721fa7245b5"><div class="ttname"><a href="macros_8hpp.html#a8f1f26490cd84e6dd2636721fa7245b5">NEGRITA</a></div><div class="ttdeci">#define NEGRITA</div><div class="ttdoc">INTENSIDAD. </div><div class="ttdef"><b>Definition:</b> <a href="macros_8hpp_source.html#l00020">macros.hpp:20</a></div></div>
+<div class="ttc" id="macros_8hpp_html_a3ab8b4157fd29a2336c702b26a967bb9"><div class="ttname"><a href="macros_8hpp.html#a3ab8b4157fd29a2336c702b26a967bb9">SUBRAYADO</a></div><div class="ttdeci">#define SUBRAYADO</div><div class="ttdoc">SUBRAYADO. </div><div class="ttdef"><b>Definition:</b> <a href="macros_8hpp_source.html#l00019">macros.hpp:19</a></div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html_a21bc9b63d9234c2c992e86fd46a82831"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html#a21bc9b63d9234c2c992e86fd46a82831">ed::MonticuloDonantes::grabarFichero</a></div><div class="ttdeci">bool grabarFichero(std::string const &amp;nombreFichero)</div><div class="ttdoc">Guardar un fichero de texto con los donantes del montículo. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8cpp_source.html#l00101">MonticuloDonantes.cpp:101</a></div></div>
+<div class="ttc" id="MonticuloDonantesMain_8cpp_html_a5c46deb9e3b4f17a4ce140a4e932766a"><div class="ttname"><a href="MonticuloDonantesMain_8cpp.html#a5c46deb9e3b4f17a4ce140a4e932766a">continuar</a></div><div class="ttdeci">void continuar()</div><div class="ttdoc">Hace una pausa para que el usuario pueda ver los datos en pantalla. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantesMain_8cpp_source.html#l00028">MonticuloDonantesMain.cpp:28</a></div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html_a64f1d01c25a4a8736f485bb236936ea5"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html#a64f1d01c25a4a8736f485bb236936ea5">ed::MonticuloDonantes::vacio</a></div><div class="ttdeci">bool vacio() const </div><div class="ttdoc">Comprueba si el montículo está vacío. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8hpp_source.html#l00067">MonticuloDonantes.hpp:67</a></div></div>
+<div class="ttc" id="namespaceed_html"><div class="ttname"><a href="namespaceed.html">ed</a></div><div class="ttdef"><b>Definition:</b> <a href="Donante_8cpp_source.html#l00010">Donante.cpp:10</a></div></div>
+<div class="ttc" id="macros_8hpp_html_ac6cb5eae7b643f5d13c9d546e81dbcaf"><div class="ttname"><a href="macros_8hpp.html#ac6cb5eae7b643f5d13c9d546e81dbcaf">INVERSO</a></div><div class="ttdeci">#define INVERSO</div><div class="ttdoc">INVERSO. </div><div class="ttdef"><b>Definition:</b> <a href="macros_8hpp_source.html#l00018">macros.hpp:18</a></div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html_a6dac172f0b6838862af90f84a3a8e0a4"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html#a6dac172f0b6838862af90f84a3a8e0a4">ed::MonticuloDonantes::cima</a></div><div class="ttdeci">Donante cima() const </div><div class="ttdoc">Devuelve el donante situado en la cima del montículo. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8cpp_source.html#l00011">MonticuloDonantes.cpp:11</a></div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html">ed::MonticuloDonantes</a></div><div class="ttdoc">Clase que almacena un montículo de donantes. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8hpp_source.html#l00020">MonticuloDonantes.hpp:20</a></div></div>
+<div class="ttc" id="macros_8hpp_html"><div class="ttname"><a href="macros_8hpp.html">macros.hpp</a></div><div class="ttdoc">Macros usadas para el menu. </div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html_a297d823d6ba807886fd8238d368896ca"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html#a297d823d6ba807886fd8238d368896ca">ed::MonticuloDonantes::borrar</a></div><div class="ttdeci">bool borrar()</div><div class="ttdoc">Borra el donante en la cima. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8cpp_source.html#l00047">MonticuloDonantes.cpp:47</a></div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html_ac578c913b4af803b8754d5709a8fd419"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html#ac578c913b4af803b8754d5709a8fd419">ed::MonticuloDonantes::cargarFichero</a></div><div class="ttdeci">void cargarFichero(std::string const &amp;nombreFichero)</div><div class="ttdoc">Carga un fichero de texto con una lista de donantes en el montículo. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8cpp_source.html#l00065">MonticuloDonantes.cpp:65</a></div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html_a6d0da00df30d7d0d4d060c92d149891f"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html#a6d0da00df30d7d0d4d060c92d149891f">ed::MonticuloDonantes::insertar</a></div><div class="ttdeci">void insertar(Donante const &amp;d)</div><div class="ttdoc">Inserta un donante en el montículo. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8cpp_source.html#l00041">MonticuloDonantes.cpp:41</a></div></div>
+<div class="ttc" id="MonticuloDonantesMain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="MonticuloDonantesMain_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Programa principal para probar la clase Donantes. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantesMain_8cpp_source.html#l00037">MonticuloDonantesMain.cpp:37</a></div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html_acf5e1a71bf334b2363582c5212cd674e"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html#acf5e1a71bf334b2363582c5212cd674e">ed::MonticuloDonantes::vaciar</a></div><div class="ttdeci">void vaciar()</div><div class="ttdoc">Vacía todos los datos del montículo. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8hpp_source.html#l00096">MonticuloDonantes.hpp:96</a></div></div>
+<div class="ttc" id="macros_8hpp_html_a1291f416b069313021b519eea62d5bf1"><div class="ttname"><a href="macros_8hpp.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a></div><div class="ttdeci">#define NORMAL</div><div class="ttdoc">APAGA. </div><div class="ttdef"><b>Definition:</b> <a href="macros_8hpp_source.html#l00017">macros.hpp:17</a></div></div>
+<div class="ttc" id="Donante_8hpp_html"><div class="ttname"><a href="Donante_8hpp.html">Donante.hpp</a></div><div class="ttdoc">Especificación de la clase Donante. </div></div>
+<div class="ttc" id="classed_1_1MonticuloDonantes_html_a137294c8561be195bdfd0f289f14f2a5"><div class="ttname"><a href="classed_1_1MonticuloDonantes.html#a137294c8561be195bdfd0f289f14f2a5">ed::MonticuloDonantes::donar</a></div><div class="ttdeci">bool donar()</div><div class="ttdoc">Aumenta en 1 el número de donaciones del donante de la cima y lo hunde si es necesario. </div><div class="ttdef"><b>Definition:</b> <a href="MonticuloDonantes_8cpp_source.html#l00057">MonticuloDonantes.cpp:57</a></div></div>
+<div class="ttc" id="MonticuloDonantes_8hpp_html"><div class="ttname"><a href="MonticuloDonantes_8hpp.html">MonticuloDonantes.hpp</a></div><div class="ttdoc">Especificación de la clase MonticuloDonantes. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Martes, 26 de Abril de 2016 15:43:22 para Donantes por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
