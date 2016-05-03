@@ -1,0 +1,1 @@
+double inf = std::numeric_limits<double>::infinity();
