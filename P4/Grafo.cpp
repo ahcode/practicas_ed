@@ -81,4 +81,18 @@ namespace ed{
       return false;
     }
   }
+
+  bool Grafo::finalVertices() const{
+    if (cursor_>=(int)vertices_.size())
+      return true;
+    else
+      return false;
+  }
+
+  Vertice Grafo::siguienteVertice(){
+    cursor_++;
+    if (finalVertices())
+      cursor_=0;
+    return vertices_[cursor_];
+  }
 }

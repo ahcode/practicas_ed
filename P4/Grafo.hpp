@@ -26,6 +26,9 @@
 				void anadirLado(const Vertice &a, const Vertice &b, const float &d);
 				bool buscarVertice(const std::string &d);
 				bool goTo(const Vertice &v);
+				Vertice verticeInicial() const{return vertices_[0];};
+				Vertice siguienteVertice();
+				bool finalVertices() const;
 		};
 	}
 #endif
