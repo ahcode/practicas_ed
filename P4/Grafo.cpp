@@ -1,6 +1,14 @@
 #include "Grafo.hpp"
 
 namespace ed{
+  /*void Grafo::mostrar(){
+    for(int i=0;i<(int)matriz_.size();i++){
+      for(int j=0;j<(int)matriz_.size();j++)
+        printf ("%f ", matriz_[i][j]);
+      printf("\n");
+    }
+  }*/
+
   int Grafo::numLados() const{
     int lados=0;
     for (int i=0;i<(int)matriz_.size();i++){
@@ -13,13 +21,11 @@ namespace ed{
   }
 
   bool Grafo::adyacente(const Vertice &a, const Vertice &b) const{
-    if (a.getEtiqueta()<(int)matriz_.size())
+    if (a.getEtiqueta()>(int)matriz_.size())
       throw 1;
-    if (b.getEtiqueta()<(int)matriz_.size())
+    if (b.getEtiqueta()>(int)matriz_.size())
       throw 2;
-    if (a.getEtiqueta()==b.getEtiqueta())
-      throw 3;
-    if(matriz_[a.getEtiqueta()][b.getEtiqueta()]<std::numeric_limits<double>::infinity())
+    if(matriz_[a.getEtiqueta()][b.getEtiqueta()]<std::numeric_limits<double>::infinity() && matriz_[a.getEtiqueta()][b.getEtiqueta()]>0)
       return true;
     else
       return false;
@@ -42,21 +48,22 @@ namespace ed{
 
   void Grafo::aumentarMatriz(){
     //Crear nueva fila y asignar valor inf a todos los elementos
-    std::vector<float> v((int)matriz_.size());
-    for (int i=0;i<(int)v.size();i++)
+    std::vector<float> v;
+    for (int i=0;i<(int)matriz_.size();i++)
       v.push_back(std::numeric_limits<double>::infinity());
     //Añadir la fila creada a la matriz
     matriz_.push_back(v);
     //Añadir nueva columna y asignar valir inf a todos los elementos
     for (int i=0;i<(int)matriz_.size();i++){
-      matriz_[i].push_back(std::numeric_limits<double>::infinity());
+      (matriz_[i]).push_back(std::numeric_limits<double>::infinity());
     }
+    matriz_[matriz_.size()-1][matriz_.size()-1]=0;
   }
 
   void Grafo::anadirLado(const Vertice &a, const Vertice &b, const float &d){
-    if (a.getEtiqueta()<(int)matriz_.size())
+    if (a.getEtiqueta()>(int)matriz_.size())
       throw 1;
-    if (b.getEtiqueta()<(int)matriz_.size())
+    if (b.getEtiqueta()>(int)matriz_.size())
       throw 2;
     matriz_[a.getEtiqueta()][b.getEtiqueta()]=d;
     if(!dirigido_)
@@ -73,9 +80,9 @@ namespace ed{
     return false;
   }
 
-  bool Grafo::goTo(const Vertice &v){
-    if (v.getEtiqueta()<(int)vertices_.size()){
-      cursor_=v.getEtiqueta();
+  bool Grafo::goTo(const int &pos){
+    if (pos<(int)vertices_.size()){
+      cursor_=pos;
       return true;
     }else{
       return false;
@@ -94,5 +101,60 @@ namespace ed{
     if (finalVertices())
       cursor_=0;
     return vertices_[cursor_];
+  }
+
+  Lado Grafo::getLado(const Vertice &a, const Vertice &b) const{
+    if (a.getEtiqueta()>(int)matriz_.size())
+      throw 1;
+    if (b.getEtiqueta()>(int)matriz_.size())
+      throw 2;
+    Lado lado;
+    lado.setPrimero(a);
+    lado.setSegundo(b);
+    lado.setDato(matriz_[a.getEtiqueta()][b.getEtiqueta()]);
+    return lado;
+  }
+
+  bool Grafo::cargarFichero(const std::string &nombre){
+    matriz_.clear();
+    vertices_.clear();
+		std::ifstream f(nombre.c_str());
+		std::string c;
+    Vertice v1;
+    Vertice v2;
+    std::stringstream stream;
+    int nvertices;
+		if(!f.is_open())
+			return false;
+    //Número de vértices
+    getline(f,c);
+    nvertices=atoi(c.c_str());
+    //Dirigido o no
+    getline(f,c);
+    if(c=="1")
+      dirigido_=true;
+    else
+      dirigido_=false;
+    //Vertices
+		for (int i=0;i<nvertices;i++){
+			getline(f,c);
+      anadirVertice(c);
+		}
+    //Lados
+    while(!f.eof()){
+      getline(f,c);
+      stream.clear();
+      stream << c;
+      getline(stream, c, ' ');
+      buscarVertice(c);
+      v1=verticeActual();
+      getline(stream, c, ' ');
+      buscarVertice(c);
+      v2=verticeActual();
+      getline(stream, c, ' ');
+      anadirLado(v1,v2,atof(c.c_str()));
+    }
+		f.close();
+    return true;
   }
 }

@@ -1,4 +1,4 @@
-OBJETOS = main.o Lado.o Grafo.o
+OBJETOS = main.o Lado.o Grafo.o funciones.o
 CPPFLAGS = -c -g -Wall -ansi
 
 main.out: $(OBJETOS)
@@ -10,7 +10,10 @@ Lado.o: Lado.cpp Lado.hpp Vertice.hpp
 Grafo.o: Grafo.cpp Grafo.hpp Lado.o Vertice.hpp
 	g++ $(CPPFLAGS) Grafo.cpp
 
-main.o: Grafo.o
+funciones.o: funciones.cpp funciones.hpp Grafo.o
+	g++ $(CPPFLAGS) funciones.cpp
+
+main.o: main.cpp Grafo.o funciones.o
 	g++ $(CPPFLAGS) main.cpp
 
 clean:
