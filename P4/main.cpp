@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "Grafo.hpp"
 #include "funciones.hpp"
 #include "macros.hpp"
@@ -21,6 +22,7 @@ int main(){
 	BORRAR;
 	Grafo gr;
 	int op;
+  float f1, f2;
 	bool error, salir=false;
 	std::string cad;
 	std::vector< std::vector<float> > mdist;
@@ -28,7 +30,7 @@ int main(){
   Vertice v1;
   Vertice v2;
   do{
-    error=0;
+    error=false;
     do{
       NEGRITA; cout << "0."; NORMAL; cout << " Salir\n";
 			NEGRITA; cout << "1."; NORMAL; cout << " Cargar grafo desde fichero\n";
@@ -46,6 +48,7 @@ int main(){
 		switch(op){
 			case 0:
 				salir=true;
+        BORRAR;
 				break;
 			case 1:
 				SUBRAYADO; cout << "\nNombre del fichero"; NORMAL; cout << " = ";
@@ -61,6 +64,12 @@ int main(){
 				BORRAR;
 				break;
 			case 2:
+        if(gr.estaVacio()){
+          cout << "\n<< El grafo está vacío >>\n\n";
+          continuar();
+          BORRAR;
+          break;
+        }
         //Listar Vértices
         NEGRITA; cout << "\tVERTICES:\n"; NORMAL;
         for (int i=0;i<gr.numVertices();i++){
@@ -97,14 +106,73 @@ int main(){
         BORRAR;
 				break;
 			case 3:
-				floyd(gr,mdist,mint);
-				gr.goTo(12);
-				v1=gr.verticeActual();
-				gr.goTo(5);
-				v2=gr.verticeActual();
-				mostrarCaminoDistancia(gr,mdist,mint,v1,v2);
-				continuar();
-				break;
+        if(gr.estaVacio()){
+          cout << "\n<< El grafo está vacío >>\n\n";
+          continuar();
+          BORRAR;
+          break;
+        }
+        floyd(gr,mdist,mint);
+        error=false;
+        do{
+          NEGRITA; cout << "0."; NORMAL; cout << " Volver\n";
+          NEGRITA; cout << "1."; NORMAL; cout << " Mostrar suma de distancias desde cada vértice\n";
+          NEGRITA; cout << "2."; NORMAL; cout << " Mostrar camino mínimo entre dos vértices\n";
+          if(error)
+            cout << "<< La opción introducida no es válida >>";
+          SUBRAYADO; cout << "\nOpción"; NORMAL; cout << " = ";
+          cin >> op;
+          cin.ignore(256,'\n');
+          BORRAR;
+          error=true;
+        }while(op<0 || op>2);
+        switch(op){
+          case 1:
+            f2=std::numeric_limits<double>::infinity();
+            for (int i=0;i<(int)mdist.size();i++){
+              gr.goTo(i);
+              v1=gr.verticeActual();
+              cout << "Vértice " << v1.getDato() << " = ";
+              f1=0;
+              for (int j=0;j<(int)mdist.size();j++)
+                f1+=mdist[i][j];
+              cout << f1 << "\n";
+              if (f1<f2){
+                f2=f1;
+                v2=v1;
+              }
+            }
+            cout << "\nEl vértice con menor suma de distancias a los demás es: " << v2.getDato() << " (" << f2 << ")\n\n";
+            continuar();
+            BORRAR;
+            break;
+          case 2:
+            error=false;
+            do{
+              if(error)
+                cout << "<< El vértice introducido no existe >>";
+              SUBRAYADO; cout << "\nVértice inicial"; NORMAL; cout << " = ";
+              getline(cin,cad);
+              BORRAR;
+              error=true;
+            }while(!gr.buscarVertice(cad));
+            v1=gr.verticeActual();
+            error=false;
+            do{
+              if(error)
+                cout << "<< El vértice introducido no existe >>";
+              SUBRAYADO; cout << "\nVértice final"; NORMAL; cout << " = ";
+              getline(cin,cad);
+              BORRAR;
+              error=true;
+            }while(!gr.buscarVertice(cad));
+            v2=gr.verticeActual();
+            mostrarCaminoDistancia(gr,mdist,mint,v1,v2);
+            cout << "\n";
+            continuar();
+            BORRAR;
+            break;
+        }
 		}
 	}while(!salir);
 	return 0;

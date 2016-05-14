@@ -52,15 +52,15 @@ namespace ed{
     std::vector<Vertice> camino;
     if (mdist[v1.getEtiqueta()][v2.getEtiqueta()]){
       caminoMinimo(gr, mint, v1, v2, camino);
-      std::cout << "El camino mínimo para ir de " << v1.getDato() << " a " << v2.getDato() << " es: " << v1.getDato() << " ->";
+      NEGRITA; std::cout << "El camino mínimo para ir de " << v1.getDato() << " a " << v2.getDato() << " es:\n"; NORMAL; std::cout << v1.getDato() << " ->";
       for (int i=0; i<(int)camino.size(); i++){
         if (i!=0)
           std::cout << " ->";
         std::cout << " " << camino[i].getDato();
       }
-      std::cout << "\nY la distancia es de: " << mdist[v1.getEtiqueta()][v2.getEtiqueta()] << "\n";
+      std::cout << "\n\nY la distancia es: " << mdist[v1.getEtiqueta()][v2.getEtiqueta()] << "\n";
     }else{
-      std::cout << "No existe camino para ir de " << v1.getDato() << " a " << v2.getDato();
+      std::cout << "\n<< No existe camino para ir de " << v1.getDato() << " a " << v2.getDato() << " >>";
     }
   }
 }
