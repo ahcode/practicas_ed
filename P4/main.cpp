@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits>
+#include <cstdlib>
 #include "Grafo.hpp"
 #include "funciones.hpp"
 #include "macros.hpp"
@@ -36,6 +37,9 @@ int main(){
 			NEGRITA; cout << "1."; NORMAL; cout << " Cargar grafo desde fichero\n";
 			NEGRITA; cout << "2."; NORMAL; cout << " Mostrar el grafo\n";
 			NEGRITA; cout << "3."; NORMAL; cout << " Algoritmo de Floyd\n";
+      NEGRITA; cout << "4."; NORMAL; cout << " Comprobar si el grafo está vacío\n";
+      NEGRITA; cout << "5."; NORMAL; cout << " Añadir vértice\n";
+      NEGRITA; cout << "6."; NORMAL; cout << " Añadir lado\n";
       if(error)
 				cout << "<< La opción introducida no es válida >>";
 			SUBRAYADO; cout << "\nOpción"; NORMAL; cout << " = ";
@@ -43,7 +47,7 @@ int main(){
       cin.ignore(256,'\n');
 			BORRAR;
 			error=true;
-    }while(op<0 || op>3);
+    }while(op<0 || op>6);
 
 		switch(op){
 			case 0:
@@ -173,6 +177,62 @@ int main(){
             BORRAR;
             break;
         }
+        break;
+      case 4:
+        if (gr.estaVacio()){
+          NEGRITA; cout << "\nEl grafo está vacío\n\n"; NORMAL;
+        }else{
+          NEGRITA; cout << "\nEl grafo no está vacío\n\n"; NORMAL;
+        }
+        continuar();
+        BORRAR;
+        break;
+      case 5:
+        SUBRAYADO; cout << "\nNombre del vértice:"; NORMAL; cout << " = ";
+        getline(cin,cad);
+        gr.anadirVertice(cad);
+        BORRAR;
+        break;
+      case 6:
+        if(gr.numVertices()<2){
+          cout << "\n<< Debe haber al menos 2 vértices >>\n\n";
+          continuar();
+          BORRAR;
+          break;
+        }
+        error=false;
+        do{
+          if(error)
+            cout << "<< El vértice introducido no existe >>";
+          SUBRAYADO; cout << "\nPrimer vértice"; NORMAL; cout << " = ";
+          getline(cin,cad);
+          BORRAR;
+          error=true;
+        }while(!gr.buscarVertice(cad));
+        v1=gr.verticeActual();
+        error=false;
+        do{
+          if(error)
+            cout << "<< El vértice introducido no existe >>";
+          SUBRAYADO; cout << "\nSegundo vértice"; NORMAL; cout << " = ";
+          getline(cin,cad);
+          BORRAR;
+          error=true;
+        }while(!gr.buscarVertice(cad));
+        v2=gr.verticeActual();
+        error=false;
+        do{
+          if(error)
+            cout << "<< El peso introducido no es válido >>";
+          SUBRAYADO; cout << "\nPeso del lado"; NORMAL; cout << " = ";
+          getline(cin,cad);
+          f1=atof(cad.c_str());
+          BORRAR;
+          error=true;
+        }while(f1<0);
+        gr.anadirLado(v1,v2,f1);
+        BORRAR;
+        break;
 		}
 	}while(!salir);
 	return 0;

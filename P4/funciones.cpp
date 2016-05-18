@@ -15,7 +15,7 @@ namespace ed{
       gr.goTo(i);
       v1=gr.verticeActual();
       for (int j=0; j<gr.numVertices(); j++){
-        vi.push_back(0);
+        vi.push_back(-1);
         gr.goTo(j);
         v2=gr.verticeActual();
         vf.push_back(gr.getLado(v1,v2).getDato());
@@ -38,7 +38,7 @@ namespace ed{
 
   void caminoMinimo(Grafo &gr, std::vector< std::vector<int> > &mint, const Vertice &v1, const Vertice &v2, std::vector<Vertice> &camino){
     Vertice v;
-    if (mint[v1.getEtiqueta()][v2.getEtiqueta()]==0){
+    if (mint[v1.getEtiqueta()][v2.getEtiqueta()]==-1){
       camino.push_back(v2);
     }else{
       gr.goTo(mint[v1.getEtiqueta()][v2.getEtiqueta()]);
