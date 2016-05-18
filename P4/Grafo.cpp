@@ -1,14 +1,12 @@
+/*!
+  \file   Grafo.cpp
+  \brief  Implementación de la clase Grafo
+  \author Álvaro Herrero Pérez
+  \date   18/05/2016
+*/
 #include "Grafo.hpp"
 
 namespace ed{
-  /*void Grafo::mostrar(){
-    for(int i=0;i<(int)matriz_.size();i++){
-      for(int j=0;j<(int)matriz_.size();j++)
-        printf ("%f ", matriz_[i][j]);
-      printf("\n");
-    }
-  }*/
-
   int Grafo::numLados() const{
     int lados=0;
     for (int i=0;i<(int)matriz_.size();i++){

@@ -1,3 +1,16 @@
+/*!
+  \file   main.cpp
+  \brief  Programa de prueba para la clase Grafo
+  \author Álvaro Herrero Pérez
+  \date   18/05/2016
+*/
+
+/*!
+\mainpage Práctica 4 de la asignatura Estructura de Datos
+\author Álvaro Herrero Pérez
+\date 18 de Mayo de 2016
+*/
+
 #include <iostream>
 #include <limits>
 #include <cstdlib>
@@ -19,6 +32,9 @@ void continuar(){
 	BORRAR;
 }
 
+/*!
+\brief Programa principal que prueba la clase Grafo
+*/
 int main(){
 	BORRAR;
 	Grafo gr;

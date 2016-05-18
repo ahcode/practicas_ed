@@ -1,3 +1,9 @@
+/*!
+  \file   Lado.cpp
+  \brief  Implementación de la clase Lado
+  \author Álvaro Herrero Pérez
+  \date   18/05/2016
+*/
 #include "Lado.hpp"
 
 namespace ed{

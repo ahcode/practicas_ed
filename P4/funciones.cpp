@@ -1,3 +1,9 @@
+/*!
+  \file   funciones.cpp
+  \brief  Conjunto de funciones del algoritmo de Floyd para grafos
+  \author Álvaro Herrero Pérez
+  \date   18/05/2016
+*/
 #include "funciones.hpp"
 namespace ed{
   void floyd(Grafo &gr, std::vector< std::vector<float> > &mdist, std::vector< std::vector<int> > &mint){

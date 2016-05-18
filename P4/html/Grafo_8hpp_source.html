@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Donantes: Fichero Fuente Grafo.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Donantes
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Grafo.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Grafo_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef GRAFO_HPP</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define GRAFO_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">    #include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">    #include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">    #include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">    #include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">    #include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">    #include &quot;<a class="code" href="Vertice_8hpp.html">Vertice.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">    #include &quot;<a class="code" href="Lado_8hpp.html">Lado.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">namespace </span><a class="code" href="namespaceed.html">ed</a>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html">   21</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classed_1_1Grafo.html">Grafo</a>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#a436987d9eac8df790cc194563df059f8">   26</a></span>&#160;                std::vector&lt;Vertice&gt; <a class="code" href="classed_1_1Grafo.html#a436987d9eac8df790cc194563df059f8">vertices_</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#ae44ad54a4061948fff516af49db6a5a8">   30</a></span>&#160;                std::vector&lt; std::vector&lt;float&gt; &gt; <a class="code" href="classed_1_1Grafo.html#ae44ad54a4061948fff516af49db6a5a8">matriz_</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#a9d0d7c46ad8329385a79e1d676ad01cf">   34</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#a9d0d7c46ad8329385a79e1d676ad01cf">dirigido_</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#a5d8d66e3e2ff4b6288b70ad3bc4539c0">   38</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classed_1_1Grafo.html#a5d8d66e3e2ff4b6288b70ad3bc4539c0">cursor_</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classed_1_1Grafo.html#ab53d2ae4c21683fdf42bc675d0306180">aumentarMatriz</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#a0ad6a2e15c270d19f1fdcadbbfc9b7b8">   50</a></span>&#160;                <a class="code" href="classed_1_1Grafo.html#a0ad6a2e15c270d19f1fdcadbbfc9b7b8">Grafo</a>(<span class="keywordtype">bool</span> dirigido=<span class="keyword">false</span>){dirigido_=dirigido; cursor_=0;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#ab47290ab0ebaf50bce9371037a9d5a59">   56</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classed_1_1Grafo.html#ab47290ab0ebaf50bce9371037a9d5a59">numVertices</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> vertices_.size();};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classed_1_1Grafo.html#a0bbef5d4e9997a8d62feca8814ea64b5">numLados</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#a0e00db2671e2060640086508495e9736">   67</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#a0e00db2671e2060640086508495e9736">esDirigido</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> <a class="code" href="classed_1_1Grafo.html#a9d0d7c46ad8329385a79e1d676ad01cf">dirigido_</a>;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#adb8a52e07f594e42c225b331ca890852">   72</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#adb8a52e07f594e42c225b331ca890852">estaVacio</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> vertices_.empty();};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#ae7a27a7ea456d52a23eed0a62d2b6009">adyacente</a>(<span class="keyword">const</span> <a class="code" href="classed_1_1Vertice.html">Vertice</a> &amp;a, <span class="keyword">const</span> <a class="code" href="classed_1_1Vertice.html">Vertice</a> &amp;b) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#ae74752891caf87e7875edc60d3cc3699">cursorApuntaVertice</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#a6d336741f922146dce767331b53682cc">   91</a></span>&#160;                <a class="code" href="classed_1_1Vertice.html">Vertice</a> <a class="code" href="classed_1_1Grafo.html#a6d336741f922146dce767331b53682cc">verticeActual</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> vertices_[<a class="code" href="classed_1_1Grafo.html#a5d8d66e3e2ff4b6288b70ad3bc4539c0">cursor_</a>];};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classed_1_1Grafo.html#ad1a80d908ec0036d6b1a93e2fa48bb7f">anadirVertice</a>(<span class="keyword">const</span> std::string &amp;d);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classed_1_1Grafo.html#a9219ca8965ac26df1106c1487f572150">anadirLado</a>(<span class="keyword">const</span> <a class="code" href="classed_1_1Vertice.html">Vertice</a> &amp;a, <span class="keyword">const</span> <a class="code" href="classed_1_1Vertice.html">Vertice</a> &amp;b, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;d);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#ac7b8211445122a76487dbdea8b9b3a47">buscarVertice</a>(<span class="keyword">const</span> std::string &amp;d);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#ae121cf296df7421c5ea3520fc75725fe">goTo</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pos);</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classed_1_1Grafo.html#a5060c96600ff713eecd76b5950e224c5">  124</a></span>&#160;                <a class="code" href="classed_1_1Vertice.html">Vertice</a> <a class="code" href="classed_1_1Grafo.html#a5060c96600ff713eecd76b5950e224c5">verticeInicial</a>(){cursor_=0; <span class="keywordflow">return</span> vertices_[0];};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <a class="code" href="classed_1_1Vertice.html">Vertice</a> <a class="code" href="classed_1_1Grafo.html#a3650eb96da2dd7c6d84817fcc01d64b8">siguienteVertice</a>();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#a6119a6c6f4b9d80876f249e720655017">finalVertices</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <a class="code" href="classed_1_1Lado.html">Lado</a> <a class="code" href="classed_1_1Grafo.html#ab9b7b20cfe0553d47c2fcde2a515b790">getLado</a>(<span class="keyword">const</span> <a class="code" href="classed_1_1Vertice.html">Vertice</a> &amp;a, <span class="keyword">const</span> <a class="code" href="classed_1_1Vertice.html">Vertice</a> &amp;b) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classed_1_1Grafo.html#a09a72a0696372da828b52fd3d9f5ccf8">cargarFichero</a>(<span class="keyword">const</span> std::string &amp;nombre);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        };</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classed_1_1Grafo_html_ad1a80d908ec0036d6b1a93e2fa48bb7f"><div class="ttname"><a href="classed_1_1Grafo.html#ad1a80d908ec0036d6b1a93e2fa48bb7f">ed::Grafo::anadirVertice</a></div><div class="ttdeci">void anadirVertice(const std::string &amp;d)</div><div class="ttdoc">Añade un vértice al grafo. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00039">Grafo.cpp:39</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_ae121cf296df7421c5ea3520fc75725fe"><div class="ttname"><a href="classed_1_1Grafo.html#ae121cf296df7421c5ea3520fc75725fe">ed::Grafo::goTo</a></div><div class="ttdeci">bool goTo(const int &amp;pos)</div><div class="ttdoc">Mueve el cursor de vértices a una determinada posición. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00081">Grafo.cpp:81</a></div></div>
+<div class="ttc" id="Vertice_8hpp_html"><div class="ttname"><a href="Vertice_8hpp.html">Vertice.hpp</a></div><div class="ttdoc">Implementación y espacificación de la clase Grafo. </div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a9219ca8965ac26df1106c1487f572150"><div class="ttname"><a href="classed_1_1Grafo.html#a9219ca8965ac26df1106c1487f572150">ed::Grafo::anadirLado</a></div><div class="ttdeci">void anadirLado(const Vertice &amp;a, const Vertice &amp;b, const float &amp;d)</div><div class="ttdoc">Añade un lado al grafo. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00061">Grafo.cpp:61</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_ae7a27a7ea456d52a23eed0a62d2b6009"><div class="ttname"><a href="classed_1_1Grafo.html#ae7a27a7ea456d52a23eed0a62d2b6009">ed::Grafo::adyacente</a></div><div class="ttdeci">bool adyacente(const Vertice &amp;a, const Vertice &amp;b) const </div><div class="ttdoc">Comprueba si 2 vértices son adyacentes o no. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00021">Grafo.cpp:21</a></div></div>
+<div class="ttc" id="Lado_8hpp_html"><div class="ttname"><a href="Lado_8hpp.html">Lado.hpp</a></div><div class="ttdoc">Especificación de la clase Lado. </div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a5d8d66e3e2ff4b6288b70ad3bc4539c0"><div class="ttname"><a href="classed_1_1Grafo.html#a5d8d66e3e2ff4b6288b70ad3bc4539c0">ed::Grafo::cursor_</a></div><div class="ttdeci">int cursor_</div><div class="ttdoc">Cursor de vértices. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00038">Grafo.hpp:38</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_ab47290ab0ebaf50bce9371037a9d5a59"><div class="ttname"><a href="classed_1_1Grafo.html#ab47290ab0ebaf50bce9371037a9d5a59">ed::Grafo::numVertices</a></div><div class="ttdeci">int numVertices() const </div><div class="ttdoc">Devuelve el número de vértices del grafo. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00056">Grafo.hpp:56</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a436987d9eac8df790cc194563df059f8"><div class="ttname"><a href="classed_1_1Grafo.html#a436987d9eac8df790cc194563df059f8">ed::Grafo::vertices_</a></div><div class="ttdeci">std::vector&lt; Vertice &gt; vertices_</div><div class="ttdoc">Vector de vértices. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00026">Grafo.hpp:26</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a5060c96600ff713eecd76b5950e224c5"><div class="ttname"><a href="classed_1_1Grafo.html#a5060c96600ff713eecd76b5950e224c5">ed::Grafo::verticeInicial</a></div><div class="ttdeci">Vertice verticeInicial()</div><div class="ttdoc">Devuelve el primer vértice que se añadió al vector de vértices. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00124">Grafo.hpp:124</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_ae74752891caf87e7875edc60d3cc3699"><div class="ttname"><a href="classed_1_1Grafo.html#ae74752891caf87e7875edc60d3cc3699">ed::Grafo::cursorApuntaVertice</a></div><div class="ttdeci">bool cursorApuntaVertice() const </div><div class="ttdoc">Comprueba si el cursor del grafo apunta a un vértice o no. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00032">Grafo.cpp:32</a></div></div>
+<div class="ttc" id="namespaceed_html"><div class="ttname"><a href="namespaceed.html">ed</a></div><div class="ttdef"><b>Definition:</b> <a href="funciones_8cpp_source.html#l00008">funciones.cpp:8</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html"><div class="ttname"><a href="classed_1_1Grafo.html">ed::Grafo</a></div><div class="ttdoc">Implementación de la clase Grafo. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00021">Grafo.hpp:21</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a3650eb96da2dd7c6d84817fcc01d64b8"><div class="ttname"><a href="classed_1_1Grafo.html#a3650eb96da2dd7c6d84817fcc01d64b8">ed::Grafo::siguienteVertice</a></div><div class="ttdeci">Vertice siguienteVertice()</div><div class="ttdoc">Mueve el cursor una posición y devuelve el vértice de dicha posición. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00097">Grafo.cpp:97</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a6d336741f922146dce767331b53682cc"><div class="ttname"><a href="classed_1_1Grafo.html#a6d336741f922146dce767331b53682cc">ed::Grafo::verticeActual</a></div><div class="ttdeci">Vertice verticeActual() const </div><div class="ttdoc">Devuelve el vértice al que apunta el cursor. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00091">Grafo.hpp:91</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a09a72a0696372da828b52fd3d9f5ccf8"><div class="ttname"><a href="classed_1_1Grafo.html#a09a72a0696372da828b52fd3d9f5ccf8">ed::Grafo::cargarFichero</a></div><div class="ttdeci">bool cargarFichero(const std::string &amp;nombre)</div><div class="ttdoc">Carga un fichero que contenga la estructura de un grafo. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00116">Grafo.cpp:116</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a0e00db2671e2060640086508495e9736"><div class="ttname"><a href="classed_1_1Grafo.html#a0e00db2671e2060640086508495e9736">ed::Grafo::esDirigido</a></div><div class="ttdeci">bool esDirigido() const </div><div class="ttdoc">Comprueba si el grafo es dirigido o no. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00067">Grafo.hpp:67</a></div></div>
+<div class="ttc" id="classed_1_1Lado_html"><div class="ttname"><a href="classed_1_1Lado.html">ed::Lado</a></div><div class="ttdoc">Implementación de la clase Lado que une 2 vértices de un grafo. </div><div class="ttdef"><b>Definition:</b> <a href="Lado_8hpp_source.html#l00016">Lado.hpp:16</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_adb8a52e07f594e42c225b331ca890852"><div class="ttname"><a href="classed_1_1Grafo.html#adb8a52e07f594e42c225b331ca890852">ed::Grafo::estaVacio</a></div><div class="ttdeci">bool estaVacio() const </div><div class="ttdoc">Comprueba si el grafo está vacío o no. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00072">Grafo.hpp:72</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a9d0d7c46ad8329385a79e1d676ad01cf"><div class="ttname"><a href="classed_1_1Grafo.html#a9d0d7c46ad8329385a79e1d676ad01cf">ed::Grafo::dirigido_</a></div><div class="ttdeci">bool dirigido_</div><div class="ttdoc">Indica si el grafo es dirigido o no. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00034">Grafo.hpp:34</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_ae44ad54a4061948fff516af49db6a5a8"><div class="ttname"><a href="classed_1_1Grafo.html#ae44ad54a4061948fff516af49db6a5a8">ed::Grafo::matriz_</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; float &gt; &gt; matriz_</div><div class="ttdoc">Matriz de adyacencia. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00030">Grafo.hpp:30</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_ab53d2ae4c21683fdf42bc675d0306180"><div class="ttname"><a href="classed_1_1Grafo.html#ab53d2ae4c21683fdf42bc675d0306180">ed::Grafo::aumentarMatriz</a></div><div class="ttdeci">void aumentarMatriz()</div><div class="ttdoc">Aumenta el ancho y alto de la matriz de adyacencia en una unidad. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00047">Grafo.cpp:47</a></div></div>
+<div class="ttc" id="classed_1_1Vertice_html"><div class="ttname"><a href="classed_1_1Vertice.html">ed::Vertice</a></div><div class="ttdoc">Implementación de la clase vértice. </div><div class="ttdef"><b>Definition:</b> <a href="Vertice_8hpp_source.html#l00014">Vertice.hpp:14</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a6119a6c6f4b9d80876f249e720655017"><div class="ttname"><a href="classed_1_1Grafo.html#a6119a6c6f4b9d80876f249e720655017">ed::Grafo::finalVertices</a></div><div class="ttdeci">bool finalVertices() const </div><div class="ttdoc">Comprueba si el cursor está en la primera posición vacía del vector. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00090">Grafo.cpp:90</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_ac7b8211445122a76487dbdea8b9b3a47"><div class="ttname"><a href="classed_1_1Grafo.html#ac7b8211445122a76487dbdea8b9b3a47">ed::Grafo::buscarVertice</a></div><div class="ttdeci">bool buscarVertice(const std::string &amp;d)</div><div class="ttdoc">Busca un vértice cuyo dato sea igual al pasado como parámetro. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00071">Grafo.cpp:71</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a0ad6a2e15c270d19f1fdcadbbfc9b7b8"><div class="ttname"><a href="classed_1_1Grafo.html#a0ad6a2e15c270d19f1fdcadbbfc9b7b8">ed::Grafo::Grafo</a></div><div class="ttdeci">Grafo(bool dirigido=false)</div><div class="ttdoc">Constructor de la clase grafo, inicia el cursor a 0 y establece si el grafo es dirigido o no...</div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8hpp_source.html#l00050">Grafo.hpp:50</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_a0bbef5d4e9997a8d62feca8814ea64b5"><div class="ttname"><a href="classed_1_1Grafo.html#a0bbef5d4e9997a8d62feca8814ea64b5">ed::Grafo::numLados</a></div><div class="ttdeci">int numLados() const </div><div class="ttdoc">Devuelve el número de lados del grafo. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00010">Grafo.cpp:10</a></div></div>
+<div class="ttc" id="classed_1_1Grafo_html_ab9b7b20cfe0553d47c2fcde2a515b790"><div class="ttname"><a href="classed_1_1Grafo.html#ab9b7b20cfe0553d47c2fcde2a515b790">ed::Grafo::getLado</a></div><div class="ttdeci">Lado getLado(const Vertice &amp;a, const Vertice &amp;b) const </div><div class="ttdoc">Devuelve el lado que hay entre 2 vértices pasados como parámetro. </div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8cpp_source.html#l00104">Grafo.cpp:104</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Miércoles, 18 de Mayo de 2016 17:17:14 para Donantes por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
